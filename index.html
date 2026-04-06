@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+  <!-- Materialize - Compiled and minified CSS-->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
+  <!-- Font Awesome Icon - CSS-->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <!-- Custom Styles-->
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <title>Iñigo Díez Osua | Chemistry &amp; Data Science</title>
+
+
+  <!-- Open Graph-->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Iñigo Díez Osua | Chemistry &amp; Data Science" />
+  <meta property="og:description" content="Chemistry student with interest in Data Science and Machine Learning" />
+  <meta property="og:url" content="https://inigo-diez.github.io/" />
+  <meta property="og:site_name" content="Iñigo Díez Osua | Chemistry &amp; Data Science" />
+  <meta name="author" content="Iñigo Díez Osua" />
+  <meta name="description" content="Chemistry student with a passion for data science, machine learning and quantitative analysis of complex scientific problems." />
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="/assets/img/favicon/manifest.json" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="robots" content="index, follow" />
+</head>
+
+<body>
+  
+  <!-- Navigation Menu-->
+  <!-- Nav class 1 -->
+  <nav class="hide-on-small-only">
+    <ul class="side-nav fixed section table-of-contents">
+
+      <li class="logo">
+        <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro"
+          class="brand-logo grey-blue-text">
+          <img src="/assets/img/IMG_3145.jpg" class="circle profile-pic" alt="avatar">
+        </a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
+            class="mdi-social-person small"></i><span>About</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Experience section" href="#experience"
+          class="waves-effect waves-dark teal-text"><i
+            class="mdi-action-trending-up small"></i><span>Experience</span></a>
+      </li>
+
+      <li class="bold">
+        <!-- mdi-av-web small
+             mdi-av-my-library-books small-->
+        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
+            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
+      </li>
+
+      <li class="bold">
+        <!--
+        ICONS:
+        mdi-action-assessment
+        mdi-social-poll
+        mdi-av-equalizer
+        -->
+        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
+            class="mdi-action-assessment small"></i><span>Skills</span></a>
+      </li>
+      
+      <li class="bold">
+        <!--
+        ICONS:
+        -->
+        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
+            class="mdi-social-school small"></i><span>Education</span></a>
+      </li>
+
+      <li class="bold">
+        <!-- 
+        1. mdi-communication-contacts
+        2. mdi-content-mail
+        3. mdi-communication-email
+        -->
+        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
+            class="mdi-content-mail small"></i><span>Contact</span></a>
+      </li>
+
+      <li class="bold">
+        <!--
+        ICONS:
+        1. mdi-action-description
+        2. mdi-file-folder
+        3. mdi-file-folder-open
+        4. mdi-file-attachment
+        5. mdi-file-folder-shared
+        -->
+        <a aria-label="Ir a la sección CV" href="#cv"
+        class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>CV</span></a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Nav class 2 -->
+  <nav class="hide-on-large only trigger z-depth-1">
+    <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out"
+      class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    <div class="name-title">
+      <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Iñigo
+        Díez Osua</a><span class="black-text">Chemistry &amp; Data Science</span>
+    </div>
+  </nav>
+
+  <!-- Nav class 3 -->
+  <nav class="hide-on-large only">
+    <ul id="slide-out" class="side-nav">
+      <li class="bold">
+        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
+            class="mdi-social-person small"></i><span>About</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Experience section" href="#experience"
+          class="waves-effect waves-dark teal-text"><i
+            class="mdi-action-trending-up small"></i><span>Experience</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
+            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
+            class="mdi-action-assessment small"></i><span>Skills</span></a>
+      </li>
+
+      <li class="bold">
+        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
+            class="mdi-social-school small"></i><span>Education</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
+            class="mdi-content-mail small"></i><span>Contact</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Ir a la sección CV" href="#cv"
+          class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>CV</span></a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main Content-->
+  <main>
+    <!-- First Section: Heading lines and image -->
+    <section id="intro" class="section scrollspy full-height">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="col-md-9">
+          <div class="content section-padding valign" style="margin-left: 10%; margin-top: 50px;">
+            <div class="caption">
+              <h2>Hi, I'm <span class="teal">Iñigo Díez Osua.</span></h2>
+              <h5 style="color:#fff">A <span class="typing" style="font-weight: 700; color:#a7ffeb; font-size:1.15em;"></span></h5>
+              <h5>Estudiante de Química con interés en la ciencia de datos y el análisis cuantitativo de problemas complejos. Busco construir un perfil interdisciplinar que combine base experimental, capacidad analítica y desarrollo computacional.</h5>
+            </div>
+            <div class="social">
+              <a href="https://github.com/inigo-diez" target="_blank">
+                <button class="icon-btn github">
+                  <i class="fa fa-github"></i>
+                </button>
+              </a>
+            </div>
+            <div class='buttons'>
+              <a href="#about" class="readme">Read More</a>
+              <a href="#contact" class="contactme">Contact Me</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Second Section: About -->
+    <section id="about" class="section scrollspy">
+      <h3 class="page-title white-text teal">About</h3>
+      <div class="container flow-text">
+        <!-- <blockquote>
+          <h2>
+            A Software Developer with a passion for Backend Development and Artificial Intelligence.
+
+          </h2>
+        </blockquote> -->        
+        <p>
+          Estudiante de 4.º curso del Grado en Química en la UPV/EHU, con experiencia en el análisis de datos experimentales obtenidos mediante técnicas analíticas. Mi formación complementaria en Python, estadística aplicada y machine learning ha reforzado mi interés por orientar mi trayectoria hacia la ciencia de datos, con especial interés en la aplicación de métodos cuantitativos y computacionales al análisis e interpretación de datos complejos.
+        </p>
+        <p>
+          <ul>
+            <li><b>Lenguajes:</b> Python, SQL</li>
+            <li><b>Librerías:</b> NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn, SciPy</li>
+            <li><b>Frameworks / ML:</b> TensorFlow, Keras, XGBoost</li>
+            <li><b>Herramientas:</b> Git, Jupyter Notebook</li>
+          </ul>
+        </p>
+        <!-- <p>
+          Another Paragraph
+        </p>  -->
+        <!-- <p>
+        <strong>Current Focus</strong>:&nbsp;<a aria-label="Navigate to the Inclusive Design Patterns homepage"
+          href="https://www.smashingmagazine.com/inclusive-design-patterns/">Accessibility</a>&nbsp;//&nbsp;<a
+          aria-label="Navigate to the Full Stack React homepage"
+          href="https://www.fullstackreact.com/">React</a>&nbsp;//&nbsp;<a
+          aria-label='Navigate to the article "Scalable CSS"'
+          href="https://mrmrs.github.io/writing/2016/03/24/scalable-css/">Design Systems</a>
+        </p> -->
+      </div>
+    </section>
+
+
+    <!-- Third Section: Experience -->
+    <section id="experience" class="section scrollspy">
+      <h3 class="page-title white-text teal">Experience</h3>
+      <div class="container">
+
+        <div class="card">
+          <div class="card-content">
+            <div class="row">
+              <div class="col s12 m10">
+                <p>
+                  <span class="card-title"><a href="https://www.ehu.eus/es/web/graduak/grado-quimica-bizkaia/creditos-y-asignaturas" target="_blank"
+                      class="teal-text hoverline">EHU/UPV — Universidad del País Vasco</a></span>
+                </p>
+              </div>
+            </div>
+            <div class="role brown-text text-darken-2">Grado en Química</div>
+            <ul>
+              <li>Base sólida en ciencias experimentales y análisis cuantitativo, adquirida a través de formación teórica y práctica en distintas áreas de la química.</li>
+              <li>Experiencia en el tratamiento e interpretación de datos experimentales en laboratorio, aplicando métodos estadísticos al análisis de resultados.</li>
+              <li>Aplicación creciente de herramientas computacionales y de análisis de datos al estudio de problemas científicos reales.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <div class="row">
+              <div class="col s12 m10">
+                <p>
+                  <span class="card-title teal-text">Eje microbiota-cerebro: Análisis metabolómico mediante GC-MS para la identificación de biomarcadores potenciales asociados a esquizofrenia</span>
+                </p>
+              </div>
+            </div>
+            <div class="role brown-text text-darken-2">EHU/UPV</div>
+            <ul>
+              <li>Desarrollo de un proyecto de metabolómica experimental y analítica basado en GC-MS, orientado al estudio de compuestos potencialmente relevantes en el eje microbiota-cerebro.</li>
+              <li>Diseño y optimización de condiciones experimentales mediante análisis sistemático de variables, evaluando su impacto sobre la detección de metabolitos y la robustez analítica.</li>
+              <li>Procesamiento de datos cromatográficos mediante extracción de variables cuantitativas, limpieza y estructuración de datasets, y aplicación de análisis estadístico y multivariante.</li>
+              <li>Comparación e interpretación de perfiles metabolómicos entre grupos de muestras para la identificación de patrones diferenciales y biomarcadores potenciales.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Fourth Section: Projects -->
+    <section id="projects" class="section scrollspy">
+      <h3 class="page-title white-text teal">GitHub Projects</h3>
+      <div class="container">
+
+        <!-- GRUPO 1: Metabolómica -->
+        <div style="border-left: 4px solid #008073; padding-left: 12px; margin-bottom: 24px; margin-top: 10px;">
+          <h5 class="teal-text" style="margin:0; font-weight:600;">Metabolómica &amp; Biomarcadores de Salud Mental</h5>
+          <p class="grey-text" style="margin:4px 0 0 0; font-size:0.9rem;">GC-MS · Python · Machine Learning · Estadística multivariante · TFG</p>
+        </div>
+        <!-- ── Proyectos Grupo 1 ── -->
+        <div class="project-group-block">
+
+          <!-- P1 -->
+          <div class="project-item">
+            <div class="row valign-wrapper" style="margin:0;">
+              <div class="col s12 m3">
+                <div class="project-stat-box">
+                  <img src="/assets/img/proj-metab-clustermap.png" alt="Clustermap biomarcadores" style="width:100%;height:130px;object-fit:cover;border-radius:6px 6px 0 0;">
+                  <div style="padding:12px 8px 10px;">
+                    <div class="project-stat-number">39 K</div>
+                    <div class="project-stat-label">biomarcadores indexados</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m9">
+                <a href="https://github.com/inigo-diez/Mental-Health-Biomarkers-Database-1-Parte-" target="_blank" class="project-title-link">Base de Datos de Biomarcadores Metabólicos Psiquiátricos<span class="project-title-hint">↗ Click para ver el proyecto en GitHub</span></a>
+                <div class="project-chips">
+                  <span class="chip tech-chip">Python</span><span class="chip tech-chip">pandas</span><span class="chip tech-chip">PubChem API</span><span class="chip tech-chip">requests</span><span class="chip tech-chip">BeautifulSoup</span><span class="chip tech-chip">NumPy</span><span class="chip tech-chip">HTML dashboard</span>
+                </div>
+                <p class="project-description">Pipeline automatizado para recopilar y consolidar ~39.000 entradas de biomarcadores metabólicos psiquiátricos a partir de 6 bases de datos científicas abiertas. El sistema integra deduplicación robusta por InChIKey y PubChem CID, clasificación automática de volatilidad (VOC / SVOC / NVOC) y análisis diferencial de microbiota intestinal. El resultado es un recurso estructurado y reutilizable para investigación en el eje microbiota-cerebro, accesible a través de un dashboard HTML interactivo.</p>
+                <a href="https://github.com/inigo-diez/Mental-Health-Biomarkers-Database-1-Parte-" target="_blank" class="project-gh-btn btn-small waves-effect waves-light blue-grey"><i class="fa fa-github"></i> Ver en GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- P2 -->
+          <div class="project-item">
+            <div class="row valign-wrapper" style="margin:0;">
+              <div class="col s12 m3">
+                <div class="project-stat-box">
+                  <img src="/assets/img/proj-metab-pca.png" alt="PCA experimentos" style="width:100%;height:130px;object-fit:cover;border-radius:6px 6px 0 0;">
+                  <div style="padding:12px 8px 10px;">
+                    <div class="project-stat-number">279</div>
+                    <div class="project-stat-label">metabolitos de calidad</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m9">
+                <a href="https://github.com/inigo-diez/Analisis-Metabolomico-Estadistico-con-Python-2-Parte-" target="_blank" class="project-title-link">Análisis Metabolómico Estadístico sobre Datos GC-MS<span class="project-title-hint">↗ Click para ver el proyecto en GitHub</span></a>
+                <div class="project-chips">
+                  <span class="chip tech-chip">Python</span><span class="chip tech-chip">PCA</span><span class="chip tech-chip">K-Means</span><span class="chip tech-chip">Mann-Whitney U</span><span class="chip tech-chip">XGBoost</span><span class="chip tech-chip">Random Forest</span><span class="chip tech-chip">SHAP</span><span class="chip tech-chip">scikit-learn</span><span class="chip tech-chip">SciPy</span><span class="chip tech-chip">Matplotlib</span><span class="chip tech-chip">Seaborn</span>
+                </div>
+                <p class="project-description">Pipeline completo de análisis estadístico y machine learning sobre datos GC-MS reales procedentes de 17 experimentos, reduciendo 1.230 picos cromatográficos a 279 metabolitos de alta calidad tras filtrado riguroso. El proyecto se organiza en 8 notebooks especializados que cubren EDA, normalización, reducción de dimensionalidad (PCA), clustering no supervisado (K-Means), contrastes de hipótesis no paramétricos (Mann-Whitney U), Random Forest, XGBoost e interpretabilidad con SHAP para identificar los metabolitos más relevantes entre grupos.</p>
+                <a href="https://github.com/inigo-diez/Analisis-Metabolomico-Estadistico-con-Python-2-Parte-" target="_blank" class="project-gh-btn btn-small waves-effect waves-light blue-grey"><i class="fa fa-github"></i> Ver en GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- P3 -->
+          <div class="project-item">
+            <div class="row valign-wrapper" style="margin:0;">
+              <div class="col s12 m3">
+                <div class="project-stat-box">
+                  <img src="/assets/img/proj-metab-bubble.png" alt="Bubble candidatos" style="width:100%;height:130px;object-fit:cover;border-radius:6px 6px 0 0;">
+                  <div style="padding:12px 8px 10px;">
+                    <div class="project-stat-number">4D</div>
+                    <div class="project-stat-label">scoring multicriterio</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m9">
+                <a href="https://github.com/inigo-diez/Analisis-de-Metabolitos-de-Salud-Mental-de-Mayor-Importancia-y-Caracterizacion-de-ellos-3-Parte-" target="_blank" class="project-title-link">Caracterización de Metabolitos Clave — Candidatos a Biomarcadores<span class="project-title-hint">↗ Click para ver el proyecto en GitHub</span></a>
+                <div class="project-chips">
+                  <span class="chip tech-chip">Python</span><span class="chip tech-chip">pandas</span><span class="chip tech-chip">NumPy</span><span class="chip tech-chip">SHAP</span><span class="chip tech-chip">scoring multicriterio</span><span class="chip tech-chip">PubChem API</span><span class="chip tech-chip">Matplotlib</span>
+                </div>
+                <p class="project-description">Identificación y priorización de VOCs candidatos a biomarcadores de esquizofrenia mediante un sistema de scoring multicriterio propio con ponderación de cuatro dimensiones: varianza explicada (40%), magnitud del efecto (30%), importancia SHAP del modelo ML (20%) y significancia estadística (10%). Los candidatos se cruzan contra la base de datos de ~39.000 compuestos para validar su relevancia biológica y obtener su caracterización fisicoquímica completa.</p>
+                <a href="https://github.com/inigo-diez/Analisis-de-Metabolitos-de-Salud-Mental-de-Mayor-Importancia-y-Caracterizacion-de-ellos-3-Parte-" target="_blank" class="project-gh-btn btn-small waves-effect waves-light blue-grey"><i class="fa fa-github"></i> Ver en GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- P4 -->
+          <div class="project-item">
+            <div class="row valign-wrapper" style="margin:0;">
+              <div class="col s12 m3">
+                <div class="project-stat-box">
+                  <img src="/assets/img/proj-rsm-comparacion.png" alt="Comparación RSM" style="width:100%;height:130px;object-fit:cover;border-radius:6px 6px 0 0;">
+                  <div style="padding:12px 8px 10px;">
+                    <div class="project-stat-number">63+</div>
+                    <div class="project-stat-label">superficies de respuesta</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m9">
+                <a href="https://github.com/inigo-diez/RSM-estadistica-optimizacion-extraccion-VOCs" target="_blank" class="project-title-link">Optimización de Extracción de VOCs mediante RSM<span class="project-title-hint">↗ Click para ver el proyecto en GitHub</span></a>
+                <div class="project-chips">
+                  <span class="chip tech-chip">Python</span><span class="chip tech-chip">RSM</span><span class="chip tech-chip">Diseño CCD</span><span class="chip tech-chip">NumPy</span><span class="chip tech-chip">SciPy</span><span class="chip tech-chip">Hessiano</span><span class="chip tech-chip">deseabilidad ponderada</span><span class="chip tech-chip">Matplotlib</span><span class="chip tech-chip">mpl_toolkits 3D</span>
+                </div>
+                <p class="project-description">Optimización multirespuesta del proceso de extracción aromática de VOCs mediante Response Surface Methodology (RSM) con diseño compuesto central (CCD): 3 factores, 17 experimentos, 9 variables de respuesta simultáneas. El análisis incluye ajuste de modelos cuadráticos, localización de óptimos mediante gradiente y análisis del Hessiano, función de deseabilidad ponderada y más de 63 visualizaciones 3D de superficies de respuesta para interpretación de las interacciones entre factores.</p>
+                <a href="https://github.com/inigo-diez/RSM-estadistica-optimizacion-extraccion-VOCs" target="_blank" class="project-gh-btn btn-small waves-effect waves-light blue-grey"><i class="fa fa-github"></i> Ver en GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- P5 -->
+          <div class="project-item" style="border-bottom:none;">
+            <div class="row valign-wrapper" style="margin:0;">
+              <div class="col s12 m3">
+                <div class="project-stat-box">
+                  <img src="/assets/img/proj-metab-shap.png" alt="SHAP SPME" style="width:100%;height:130px;object-fit:cover;border-radius:6px 6px 0 0;">
+                  <div style="padding:12px 8px 10px;">
+                    <div class="project-stat-number">~70%</div>
+                    <div class="project-stat-label">importancia: tiempo extracción</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m9">
+                <a href="https://github.com/inigo-diez/Complete-optimization-of-an-anlytical-chemistry-experimental-design" target="_blank" class="project-title-link">Optimización Experimental SPME-GC-MS con ML<span class="project-title-hint">↗ Click para ver el proyecto en GitHub</span></a>
+                <div class="project-chips">
+                  <span class="chip tech-chip">Python</span><span class="chip tech-chip">Random Forest</span><span class="chip tech-chip">XGBoost</span><span class="chip tech-chip">Gaussian Process</span><span class="chip tech-chip">PLS</span><span class="chip tech-chip">RSM</span><span class="chip tech-chip">Diseño CCD</span><span class="chip tech-chip">scikit-learn</span><span class="chip tech-chip">NumPy</span><span class="chip tech-chip">Matplotlib</span>
+                </div>
+                <p class="project-description">Comparación entre RSM clásico y modelos de machine learning para optimizar el proceso de extracción SPME-GC-MS en metabolómica fecal. El Random Forest supera en capacidad predictiva al RSM clásico, e identifica el tiempo de extracción como el factor dominante (~70% de importancia relativa). Se evalúan además XGBoost, Gaussian Process Regression y PLS como modelos alternativos, proporcionando una visión comparativa rigurosa de distintos enfoques de modelado sobre datos experimentales reales.</p>
+                <a href="https://github.com/inigo-diez/Complete-optimization-of-an-anlytical-chemistry-experimental-design" target="_blank" class="project-gh-btn btn-small waves-effect waves-light blue-grey"><i class="fa fa-github"></i> Ver en GitHub</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- GRUPO 2: Geopolítica y Crudo -->
+        <div style="border-left: 4px solid #008073; padding-left: 12px; margin-bottom: 24px; margin-top: 40px;">
+          <h5 class="teal-text" style="margin:0; font-weight:600;">Geopolítica, Crudo WTI y Mercados Financieros</h5>
+          <p class="grey-text" style="margin:4px 0 0 0; font-size:0.9rem;">GDELT · Monte Carlo · RSJD · Machine Learning · Modelado de agentes</p>
+        </div>
+
+        <div class="project-group-block">
+
+          <!-- G1 -->
+          <div class="project-item">
+            <div class="row valign-wrapper" style="margin:0;">
+              <div class="col s12 m3">
+                <div class="project-stat-box project-stat-box--geo">
+                  <img src="/assets/img/proj-gdelt-stress.png" alt="Stress vs Normal WTI" style="width:100%;height:130px;object-fit:cover;border-radius:6px 6px 0 0;">
+                  <div style="padding:12px 8px 10px;">
+                    <div class="project-stat-number">AUC 0.62</div>
+                    <div class="project-stat-label">predicción estrés WTI</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m9">
+                <a href="https://github.com/inigo-diez/oil-market-stress-gdelt" target="_blank" class="project-title-link">Predicción de Estrés en el Mercado del Petróleo con GDELT<span class="project-title-hint">↗ Click para ver el proyecto en GitHub</span></a>
+                <div class="project-chips">
+                  <span class="chip tech-chip">Python</span><span class="chip tech-chip">scikit-learn</span><span class="chip tech-chip">SHAP</span><span class="chip tech-chip">GDELT</span><span class="chip tech-chip">GPR</span><span class="chip tech-chip">FRED API</span><span class="chip tech-chip">CBOE/VIX</span><span class="chip tech-chip">pandas</span><span class="chip tech-chip">NumPy</span><span class="chip tech-chip">Matplotlib</span>
+                </div>
+                <p class="project-description">Investigación sobre la capacidad predictiva de la actividad de noticias geopolíticas globales (base de datos GDELT) para anticipar días de alto estrés en el mercado WTI con un día de antelación, sobre una serie temporal de 2010 a 2026. Se construye un pipeline de clasificación binaria con ingeniería de características geopolíticas, financieras y de volatilidad implícita (OVX, VIX). El mejor modelo alcanza F1=0.571 y AUC-ROC=0.615, con interpretabilidad SHAP para identificar las señales de mayor poder predictivo.</p>
+                <a href="https://github.com/inigo-diez/oil-market-stress-gdelt" target="_blank" class="project-gh-btn btn-small waves-effect waves-light blue-grey"><i class="fa fa-github"></i> Ver en GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- G2 -->
+          <div class="project-item">
+            <div class="row valign-wrapper" style="margin:0;">
+              <div class="col s12 m3">
+                <div class="project-stat-box project-stat-box--geo">
+                  <img src="/assets/img/proj-gdelt-timeseries.png" alt="Series temporales WTI" style="width:100%;height:130px;object-fit:cover;border-radius:6px 6px 0 0;">
+                  <div style="padding:12px 8px 10px;">
+                    <div class="project-stat-number">2.000</div>
+                    <div class="project-stat-label">trayectorias Monte Carlo</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m9">
+                <a href="https://github.com/inigo-diez/wti-geopolitical-simulation-Parte-2" target="_blank" class="project-title-link">Simulación del Precio WTI bajo Estrés Geopolítico (Monte Carlo)<span class="project-title-hint">↗ Click para ver el proyecto en GitHub</span></a>
+                <div class="project-chips">
+                  <span class="chip tech-chip">Python</span><span class="chip tech-chip">Monte Carlo</span><span class="chip tech-chip">RSJD</span><span class="chip tech-chip">modelado de agentes</span><span class="chip tech-chip">OVX</span><span class="chip tech-chip">VIX</span><span class="chip tech-chip">NumPy</span><span class="chip tech-chip">SciPy</span><span class="chip tech-chip">pandas</span><span class="chip tech-chip">Matplotlib</span>
+                </div>
+                <p class="project-description">Pipeline de simulación estocástica del precio del petróleo WTI mediante el modelo Regime-Switching Jump Diffusion (RSJD), calibrado sobre 2.800 observaciones diarias (2015–2026). Se generan 2.000 trayectorias de precio bajo distintos escenarios geopolíticos con 4 tipos de agentes heterogéneos (tendencial, contrarian, hedger, especulador) para evaluar el impacto sobre estrategias financieras de cobertura y la distribución de resultados bajo condiciones de estrés extremo.</p>
+                <a href="https://github.com/inigo-diez/wti-geopolitical-simulation-Parte-2" target="_blank" class="project-gh-btn btn-small waves-effect waves-light blue-grey"><i class="fa fa-github"></i> Ver en GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- G3 -->
+          <div class="project-item" style="border-bottom:none;">
+            <div class="row valign-wrapper" style="margin:0;">
+              <div class="col s12 m3">
+                <div class="project-stat-box project-stat-box--geo">
+                  <img src="/assets/img/proj-wti-regimes.png" alt="Regímenes WTI" style="width:100%;height:130px;object-fit:cover;border-radius:6px 6px 0 0;">
+                  <div style="padding:12px 8px 10px;">
+                    <div class="project-stat-number">67</div>
+                    <div class="project-stat-label">variables de ingeniería</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m9">
+                <a href="https://github.com/inigo-diez/Geopolitica-y-Crudo-Motor-de-Inferencia-Belica-con-RSJD-y-Senales-de-Mercado-EEUU-Iran-2026-Parte-3" target="_blank" class="project-title-link">Motor de Inferencia Bélica: Contagio Financiero EE.UU.–Irán 2026<span class="project-title-hint">↗ Click para ver el proyecto en GitHub</span></a>
+                <div class="project-chips">
+                  <span class="chip tech-chip">Python</span><span class="chip tech-chip">RSJD</span><span class="chip tech-chip">yfinance</span><span class="chip tech-chip">GPR</span><span class="chip tech-chip">GDELT</span><span class="chip tech-chip">Polymarket</span><span class="chip tech-chip">feature engineering</span><span class="chip tech-chip">pandas</span><span class="chip tech-chip">NumPy</span><span class="chip tech-chip">scikit-learn</span><span class="chip tech-chip">Matplotlib</span>
+                </div>
+                <p class="project-description">Motor de inferencia predictivo que modela el contagio financiero en diferentes activos durante el conflicto EE.UU.–Irán (2026), integrando más de 40 años de datos históricos, 8 fuentes heterogéneas y 67 variables de ingeniería de características. El modelo combina RSJD, Gaussian Process Regression y señales de mercado en tiempo real para generar probabilidades de escenario validadas contra los precios de Polymarket, permitiendo comparar el modelo cuantitativo con la sabiduría colectiva del mercado de predicción.</p>
+                <a href="https://github.com/inigo-diez/Geopolitica-y-Crudo-Motor-de-Inferencia-Belica-con-RSJD-y-Senales-de-Mercado-EEUU-Iran-2026-Parte-3" target="_blank" class="project-gh-btn btn-small waves-effect waves-light blue-grey"><i class="fa fa-github"></i> Ver en GitHub</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- GRUPO 3: Kaggle -->
+        <div style="border-left: 4px solid #008073; padding-left: 12px; margin-bottom: 24px; margin-top: 40px;">
+          <h5 class="teal-text" style="margin:0; font-weight:600;">Machine Learning Aplicado — Proyectos Kaggle</h5>
+          <p class="grey-text" style="margin:4px 0 0 0; font-size:0.9rem;">Regresión · Clasificación · XGBoost · Random Forest · Feature Engineering</p>
+        </div>
+
+        <div class="project-group-block">
+
+          <!-- K1 -->
+          <div class="project-item">
+            <div class="row valign-wrapper" style="margin:0;">
+              <div class="col s12 m3">
+                <div class="project-stat-box project-stat-box--kaggle">
+                  <img src="/assets/img/proj-morosidad-roc.png" alt="ROC Morosidad" style="width:100%;height:130px;object-fit:cover;border-radius:6px 6px 0 0;">
+                  <div style="padding:12px 8px 10px;">
+                    <div class="project-stat-number">F1 0.90</div>
+                    <div class="project-stat-label">recall morosos 96.9%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m9">
+                <a href="https://github.com/inigo-diez/prediccion-morosidad-crediticia" target="_blank" class="project-title-link">Predicción de Morosidad Crediticia — Sistema de Alerta Temprana<span class="project-title-hint">↗ Click para ver el proyecto en GitHub</span></a>
+                <div class="project-chips">
+                  <span class="chip tech-chip">Python</span><span class="chip tech-chip">Random Forest</span><span class="chip tech-chip">scikit-learn</span><span class="chip tech-chip">pandas</span><span class="chip tech-chip">NumPy</span><span class="chip tech-chip">SMOTE</span><span class="chip tech-chip">GridSearchCV</span><span class="chip tech-chip">Seaborn</span><span class="chip tech-chip">Matplotlib</span><span class="chip tech-chip">feature engineering</span>
+                </div>
+                <p class="project-description">Desarrollo de un sistema de alerta temprana para identificar riesgo de impago en clientes de una entidad financiera peruana, sobre un dataset de 8.399 registros con variables demográficas, historial de crédito y comportamiento de pago. Se aplica preprocesamiento completo, ingeniería de características, balanceo de clases con SMOTE y comparación de múltiples clasificadores. El Random Forest final alcanza F1-Score=0.90 capturando el 96.9% de los morosos reales, minimizando los costes operativos asociados a falsos negativos.</p>
+                <a href="https://github.com/inigo-diez/prediccion-morosidad-crediticia" target="_blank" class="project-gh-btn btn-small waves-effect waves-light blue-grey"><i class="fa fa-github"></i> Ver en GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- K2 -->
+          <div class="project-item">
+            <div class="row valign-wrapper" style="margin:0;">
+              <div class="col s12 m3">
+                <div class="project-stat-box project-stat-box--kaggle">
+                  <img src="/assets/img/proj-cars-scatter.png" alt="Scatter XGBoost vehículos" style="width:100%;height:130px;object-fit:cover;border-radius:6px 6px 0 0;">
+                  <div style="padding:12px 8px 10px;">
+                    <div class="project-stat-number">R² 0.77</div>
+                    <div class="project-stat-label">19.237 vehículos</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m9">
+                <a href="https://github.com/inigo-diez/car-price-prediction-ml" target="_blank" class="project-title-link">Predicción de Precio de Vehículos de Segunda Mano<span class="project-title-hint">↗ Click para ver el proyecto en GitHub</span></a>
+                <div class="project-chips">
+                  <span class="chip tech-chip">Python</span><span class="chip tech-chip">XGBoost</span><span class="chip tech-chip">Random Forest</span><span class="chip tech-chip">TensorFlow/Keras</span><span class="chip tech-chip">K-Means</span><span class="chip tech-chip">scikit-learn</span><span class="chip tech-chip">pandas</span><span class="chip tech-chip">NumPy</span><span class="chip tech-chip">GridSearchCV</span><span class="chip tech-chip">Matplotlib</span><span class="chip tech-chip">Seaborn</span>
+                </div>
+                <p class="project-description">Modelado de regresión sobre 19.237 vehículos de segunda mano con 18 variables (marca, año, kilometraje, motor, transmisión, etc.) para predecir el precio de mercado. Se comparan modelos de distinta naturaleza: XGBoost, Random Forest y una red neuronal con TensorFlow/Keras. XGBoost y Random Forest alcanzan R²=0.77. Complementariamente, K-Means segmenta el catálogo en 4 clusters de precio diferenciados, ofreciendo una visión estratégica del mercado de segunda mano.</p>
+                <a href="https://github.com/inigo-diez/car-price-prediction-ml" target="_blank" class="project-gh-btn btn-small waves-effect waves-light blue-grey"><i class="fa fa-github"></i> Ver en GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- K3 -->
+          <div class="project-item" style="border-bottom:none;">
+            <div class="row valign-wrapper" style="margin:0;">
+              <div class="col s12 m3">
+                <div class="project-stat-box project-stat-box--kaggle">
+                  <img src="/assets/img/proj-cars-kmeans.png" alt="K-Means portátiles" style="width:100%;height:130px;object-fit:cover;border-radius:6px 6px 0 0;">
+                  <div style="padding:12px 8px 10px;">
+                    <div class="project-stat-number">R² 0.82</div>
+                    <div class="project-stat-label">MAE 152 € · web scraping</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m9">
+                <a href="https://github.com/inigo-diez/laptop-price-prediction-egypt" target="_blank" class="project-title-link">Predicción de Precio de Portátiles Reacondicionados (Egipto)<span class="project-title-hint">↗ Click para ver el proyecto en GitHub</span></a>
+                <div class="project-chips">
+                  <span class="chip tech-chip">Python</span><span class="chip tech-chip">XGBoost</span><span class="chip tech-chip">scikit-learn</span><span class="chip tech-chip">pandas</span><span class="chip tech-chip">NumPy</span><span class="chip tech-chip">BeautifulSoup</span><span class="chip tech-chip">web scraping</span><span class="chip tech-chip">GridSearchCV</span><span class="chip tech-chip">Matplotlib</span><span class="chip tech-chip">Seaborn</span>
+                </div>
+                <p class="project-description">Desarrollo de un sistema de valoración automática de portátiles reacondicionados para e-commerce en el mercado egipcio. El dataset de 1.033 registros fue recopilado mediante web scraping propio. Tras EDA completo y codificación de variables categóricas, se comparan múltiples modelos de regresión. El XGBoost final alcanza MAE=152€ y R²=0.823, superando al baseline en 23€, demostrando la aplicabilidad de ML para pricing dinámico en mercados secundarios de electrónica.</p>
+                <a href="https://github.com/inigo-diez/laptop-price-prediction-egypt" target="_blank" class="project-gh-btn btn-small waves-effect waves-light blue-grey"><i class="fa fa-github"></i> Ver en GitHub</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Fifth Section: Skills -->
+    <section id="skills" class="section scrollspy">
+      <h3 class="page-title white-text teal">Skills</h3>
+      <div class="container">
+        <!-- Languages and Databases -->
+        <div class="card">
+          <div class="card-content">
+            <h4 class="brown-text light">Lenguajes</h4>
+            <div class="row text-center">
+              <div class="col s4 m2">
+                <img alt="Python" src="/assets/img/python-logo-1-300x300.jpg" class="responsive-img" />Python
+              </div>
+              <div class="col s4 m2">
+                <img alt="SQL" src="/assets/img/mysql-dolphin.svg" class="responsive-img" />SQL
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h4 class="brown-text light">Librerías</h4>
+            <div class="row text-center">
+              <div class="col s4 m2">
+                <img alt="NumPy" src="/assets/img/numpy-logo-1-500x500.jpg" class="responsive-img" />NumPy
+              </div>
+              <div class="col s4 m2">
+                <img alt="Pandas" src="/assets/img/pandas-logo-2-500x500.jpg" class="responsive-img" />Pandas
+              </div>
+              <div class="col s4 m2">
+                <img alt="scikit-learn" src="/assets/img/sk-learn-logo-1-500x500.jpg" class="responsive-img" />Scikit-learn
+              </div>
+              <div class="col s4 m2">
+                <img alt="Matplotlib" src="/assets/img/matplotlib-logo-new.svg" class="responsive-img" />Matplotlib
+              </div>
+              <div class="col s4 m2">
+                <img alt="Seaborn" src="/assets/img/seaborn-logo.svg" class="responsive-img" />Seaborn
+              </div>
+              <div class="col s4 m2">
+                <img alt="SciPy" src="/assets/img/scipy-logo.svg" class="responsive-img" />SciPy
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frameworks / ML -->
+        <div class="card">
+          <div class="card-content">
+            <h4 class="brown-text light">Frameworks / ML</h4>
+            <div class="row text-center">
+              <div class="col s4 m2">
+                <img alt="TensorFlow" src="/assets/img/tensorflow-logo-1.png" class="responsive-img" />TensorFlow
+              </div>
+              <div class="col s4 m2">
+                <img alt="Keras" src="/assets/img/keras-logo.png" class="responsive-img" />Keras
+              </div>
+              <div class="col s4 m2">
+                <img alt="XGBoost" src="/assets/img/xgboost-logo.png" class="responsive-img" />XGBoost
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other -->
+        <div class="card">
+          <div class="card-content">
+            <h4 class="brown-text light">Herramientas</h4>
+            <div class="row text-center">
+              <div class="col s4 m2">
+                <img alt="Git" src="/assets/img/git.png" class="responsive-img" />Git
+              </div>
+              <div class="col s4 m2" style="padding-top: 30px;">
+                Jupyter Notebook
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- certifications -->
+        <!-- <div class="card">
+          <div class="card-content">
+            <h4 class="brown-text light">Certificates</h4>
+            <div class="row text-left">
+              <div class="container">
+                <div class="row">
+                  <div class="col s12 m6 l6">
+                    <div class="card">
+                      <div class="card-image">
+                        <img src="/assets/img/mooc-machine-learning-coursera-800x500.jpg">
+                      </div>
+                      <div class="card-content">
+                        <span class="card-title teal-text">Machine Learning (Stanford)</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col s12 m6 l6">
+                    <div class="card">
+                      <div class="card-image">
+                        <img src="/assets/img/mooc-algorithms-stanford-2-800x500.jpg">
+                      </div>
+                      <div class="card-content">
+                        <span class="card-title teal-text">Algorithms (Stanford)</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+      </div>
+    </section>
+
+    <!-- Seventh Section: Education -->
+    <section id="education" class="section scrollspy">
+      <h3 class="page-title white-text teal">Education</h3>
+      <div class="container">
+
+        <div class="card">
+          <div class="card-content">
+            <p>
+              <span class="card-title"><a href="https://www.ehu.eus/es/web/graduak/grado-quimica-bizkaia/creditos-y-asignaturas" target="_blank" class="teal-text hoverline">Universidad del País Vasco / Euskal Herriko Unibertsitatea (EHU/UPV)</a></span>
+            </p>
+            <p>Grado en Química</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <p>
+              <span class="card-title teal-text">Formación Complementaria y Certificaciones</span>
+            </p>
+            <ul>
+              <li><a href="/assets/certificates/cert_datacamp_python_data.pdf" target="_blank" class="hoverline"><b>Programa Python Data Fundamentals</b></a> — DataCamp <small class="grey-text">(Ene 2026 · 28h)</small><br>
+              Fundamentos de Python, manipulación de datos con pandas, unión de datasets, análisis exploratorio, visualización de datos.</li>
+              <li><a href="/assets/certificates/cert_datacamp_statistics_fundamentals.pdf" target="_blank" class="hoverline"><b>Statistics Fundamentals in Python</b></a> — DataCamp <small class="grey-text">(Ene 2026 · 20h)</small><br>
+              Estadística descriptiva, probabilidad, muestreo, inferencia estadística, contrastes de hipótesis, regresión lineal y logística, aplicación a datasets reales.</li>
+              <li><a href="/assets/certificates/cert_datacamp_applied_stats.pdf" target="_blank" class="hoverline"><b>Applied Statistics in Python</b></a> — DataCamp <small class="grey-text">(Ene 2026 · 16h)</small><br>
+              Diseño experimental, A/B testing, inferencia estadística, análisis bayesiano, toma de decisiones basada en datos.</li>
+              <li><b>Machine Learning Specialization (Andrew Ng)</b> — DeepLearning.AI / Stanford University (Coursera)<br>
+              Fundamentos de aprendizaje automático, modelos supervisados, evaluación y validación de modelos.</li>
+              <li><a href="/assets/certificates/cert_datacamp_sql.pdf" target="_blank" class="hoverline"><b>SQL Fundamentals</b></a> — DataCamp <small class="grey-text">(Mar 2026 · 26h)</small><br>
+              Fundamentos de SQL para consultar y analizar bases de datos relacionales: selección, filtrado, agregación, combinación de tablas, funciones de ventana y diseño de bases de datos.</li>
+              <li><a href="/assets/certificates/cert_jyts_data_scientist.pdf" target="_blank" class="hoverline"><b>De 0 a Data Scientist: Python, Machine Learning y Negocio</b></a> — Jyts <small class="grey-text">(Abr 2026)</small><br>
+              Python, manipulación de datos, estadística, análisis exploratorio, feature engineering, clasificación, regresión y proyecto final sobre datos reales.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Eight Section: Contact -->
+    <section id="contact" class="section scrollspy full-height">
+      <h3 class="page-title white-text teal">Contact</h3>
+      <div class="container">
+
+        <!-- Links directos -->
+        <p>
+          <a aria-label="Email Iñigo" href="mailto:idiezosua@gmail.com" target="_blank" data-position="top"
+            data-tooltip="Email Iñigo" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+              class="fa fa-envelope"></i></a>
+          <a aria-label="Email Iñigo" href="mailto:idiezosua@gmail.com" class="hoverline">idiezosua@gmail.com</a>
+        </p>
+        <p>
+          <a aria-label="Ver perfil de Iñigo en GitHub" href="https://github.com/inigo-diez" target="_blank"
+            data-position="top" data-tooltip="Ver en GitHub"
+            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-github"></i></a>
+          <a aria-label="Iñigo en GitHub" href="https://github.com/inigo-diez" class="hoverline"
+            target="_blank">github.com/inigo-diez</a>
+        </p>
+
+        <!-- Formulario de contacto -->
+        <div class="contact-form-card card">
+          <div class="card-content">
+
+            <!-- Icono superior -->
+            <div class="contact-form-icon">
+              <i class="fa fa-envelope" style="color:#008073; font-size:1.8rem;"></i>
+            </div>
+
+            <h5 class="center-align" style="font-weight:600; margin-top:8px;">Envíame un mensaje</h5>
+            <p class="center-align grey-text" style="margin-top:0;">¿Tienes una idea, proyecto o propuesta? ¡Hablemos!</p>
+
+            <!-- Mensaje de éxito (oculto por defecto) -->
+            <div id="contact-success" style="display:none;" class="center-align teal-text" style="font-weight:600; padding:16px 0;">
+              <i class="fa fa-check-circle" style="font-size:2rem; margin-bottom:8px; display:block;"></i>
+              ¡Mensaje enviado! Te responderé pronto.
+            </div>
+
+            <!-- Formulario -->
+            <form id="contact-form" novalidate>
+              <div class="row" style="margin-bottom:0;">
+                <div class="input-field col s12">
+                  <i class="fa fa-user prefix teal-text"></i>
+                  <input id="contact-name" name="name" type="text" required>
+                  <label for="contact-name">Nombre</label>
+                </div>
+              </div>
+              <div class="row" style="margin-bottom:0;">
+                <div class="input-field col s12">
+                  <i class="fa fa-at prefix teal-text"></i>
+                  <input id="contact-email" name="email" type="email" required>
+                  <label for="contact-email">Email</label>
+                </div>
+              </div>
+              <div class="row" style="margin-bottom:0;">
+                <div class="input-field col s12">
+                  <i class="fa fa-comment prefix teal-text"></i>
+                  <textarea id="contact-message" name="message" class="materialize-textarea" required></textarea>
+                  <label for="contact-message">Mensaje</label>
+                </div>
+              </div>
+              <div class="row" style="margin-top:8px;">
+                <div class="col s12 center-align">
+                  <button id="contact-submit" type="submit"
+                    class="btn waves-effect waves-light teal darken-2"
+                    style="padding: 0 32px; font-weight:600; border-radius:4px;">
+                    Enviar mensaje&nbsp;<i class="fa fa-paper-plane" style="margin-left:6px;"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv" class="section scrollspy">
+      <h3 class="page-title white-text teal">CV</h3>
+      <div class="container">
+        <div style="text-align:right; margin-bottom:12px;">
+          <a href="/assets/resume/cv.html" target="_blank" class="btn waves-effect waves-light teal darken-2">
+            <i class="fa fa-external-link" style="margin-right:6px;"></i>Abrir en nueva pestaña
+          </a>
+        </div>
+        <iframe
+          src="/assets/resume/cv.html"
+          style="width:100%; height:900px; border:none; border-radius:4px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);"
+          title="CV Iñigo Díez Osua">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- typed.js -->
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script type="text/javascript">
+    var typed = new Typed('.typing',{
+      strings: ["Chemistry Student", "Data Analyst", "ML Enthusiast", "Pythonista"],
+      loop: true,
+      typeSpeed: 80,
+      backSpeed: 40
+    });
+  </script>
+
+
+  <!-- Contact form -->
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      var name    = document.getElementById('contact-name').value.trim();
+      var email   = document.getElementById('contact-email').value.trim();
+      var message = document.getElementById('contact-message').value.trim();
+
+      if (!name || !email || !message) return;
+
+      var btn = document.getElementById('contact-submit');
+      btn.disabled = true;
+      btn.textContent = 'Enviando…';
+
+      try {
+        var res = await fetch('https://formspree.io/f/xpqokykq', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ name: name, email: email, message: message })
+        });
+
+        if (res.ok) {
+          document.getElementById('contact-form').style.display = 'none';
+          document.getElementById('contact-success').style.display = 'block';
+        } else {
+          throw new Error('server');
+        }
+      } catch(err) {
+        btn.disabled = false;
+        btn.innerHTML = 'Enviar mensaje&nbsp;<i class="fa fa-paper-plane" style="margin-left:6px;"></i>';
+        alert('No se pudo enviar el mensaje. Inténtalo de nuevo o escríbeme directamente a idiezosua@gmail.com');
+      }
+    });
+  </script>
+
+  <!-- jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <!-- Materialize - Compiled and minified JavaScript-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+  <script>
+    // Materialize - Initializers
+    $(document).ready(function () {
+      $(".scrollspy").scrollSpy()
+      // Initialize collapse button
+      $(".button-collapse").sideNav({
+        menuWidth: 190, // Default is 240
+        edge: "left", // Choose the horizontal origin
+        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      })
+    })
+  </script>
+</body>
+
+</html>
