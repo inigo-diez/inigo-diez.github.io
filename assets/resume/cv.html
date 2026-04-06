@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CV - Iñigo Díez Osúa</title>
+  <title>CV - Tu Nombre</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -17,30 +17,29 @@
 
     .page {
       width: 210mm;
-      height: 297mm;
+      min-height: 297mm;
       margin: 20px auto;
       background: #fff;
       display: flex;
       flex-direction: column;
       box-shadow: 0 0 12px rgba(0,0,0,0.2);
-      overflow: hidden;
     }
 
     /* ── HEADER ── */
     .header {
       text-align: center;
-      padding: 14px 40px 12px;
+      padding: 30px 40px 20px;
       border-bottom: 1px solid #b2d8d8;
       background: linear-gradient(135deg, #d4eeee 0%, #e8f6f6 100%);
     }
 
     .header img {
-      width: 88px;
-      height: 88px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
       object-position: center 15%;
-      margin-bottom: 7px;
+      margin-bottom: 10px;
       display: block;
       margin-left: auto;
       margin-right: auto;
@@ -61,16 +60,16 @@
     }
 
     .header h1 {
-      font-size: 22px;
+      font-size: 26px;
       font-weight: 700;
       letter-spacing: -0.3px;
     }
 
     .header .subtitle {
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 600;
       color: #2a7a7a;
-      margin-top: 4px;
+      margin-top: 6px;
       font-style: normal;
       letter-spacing: 0.2px;
     }
@@ -84,14 +83,13 @@
     /* ── SIDEBAR ── */
     .sidebar {
       width: 38%;
-      padding: 12px 14px;
+      padding: 24px 22px;
       border-right: 1px solid #b2d8d8;
       background: #f0fafa;
-      overflow: hidden;
     }
 
     .sidebar section {
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
 
     .sidebar h2 {
@@ -112,7 +110,10 @@
       text-align: justify;
     }
 
-    .sidebar ul { list-style: none; padding: 0; }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
 
     .contact-item {
       display: flex;
@@ -122,8 +123,16 @@
       font-size: 12px;
     }
 
-    .contact-item .icon { font-size: 13px; width: 16px; text-align: center; }
-    .contact-item a { color: #2a7a7a; text-decoration: none; }
+    .contact-item .icon {
+      font-size: 13px;
+      width: 16px;
+      text-align: center;
+    }
+
+    .contact-item a {
+      color: #2a7a7a;
+      text-decoration: none;
+    }
 
     .langs {
       display: flex;
@@ -132,17 +141,31 @@
       font-size: 12px;
     }
 
-    .skills-group { margin-bottom: 8px; }
-    .skills-group .group-title { font-weight: bold; font-size: 12px; margin-bottom: 3px; }
-    .skills-group .tags { font-size: 11.5px; color: #444; line-height: 1.7; }
+    .skills-group {
+      margin-bottom: 8px;
+    }
+
+    .skills-group .group-title {
+      font-weight: bold;
+      font-size: 12px;
+      margin-bottom: 3px;
+    }
+
+    .skills-group .tags {
+      font-size: 11.5px;
+      color: #444;
+      line-height: 1.7;
+    }
 
     /* ── MAIN CONTENT ── */
     .main {
       width: 62%;
-      padding: 14px 20px;
+      padding: 24px 28px;
     }
 
-    .main section { margin-bottom: 13px; }
+    .main section {
+      margin-bottom: 22px;
+    }
 
     .main h2 {
       font-size: 13px;
@@ -155,15 +178,17 @@
     }
 
     .main p {
-      font-size: 11.5px;
-      line-height: 1.5;
+      font-size: 12px;
+      line-height: 1.65;
       color: #000;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
       text-align: justify;
     }
 
     /* Experiencia */
-    .exp-item { margin-bottom: 8px; }
+    .exp-item {
+      margin-bottom: 14px;
+    }
 
     .exp-header {
       display: flex;
@@ -178,71 +203,145 @@
       line-height: 1.5;
     }
 
-    .exp-header .title-line .bullet { color: #2a7a7a; font-size: 14px; margin-right: 2px; }
-    .exp-header .title-line strong { font-size: 12px; }
-    .exp-header .title-line .company { font-size: 12px; color: #000; }
-    .exp-header .dates { font-size: 11px; color: #555; white-space: nowrap; }
+    .exp-header .title-line .bullet {
+      color: #2a7a7a;
+      font-size: 14px;
+      margin-right: 2px;
+    }
 
-    .exp-body { padding-left: 14px; }
+    .exp-header .title-line strong {
+      font-size: 12px;
+    }
+
+    .exp-header .title-line .company {
+      font-size: 12px;
+      color: #000;
+    }
+
+    .exp-header .dates {
+      font-size: 11px;
+      color: #555;
+      white-space: nowrap;
+    }
+
+    .exp-body {
+      padding-left: 14px;
+    }
 
     .exp-body p {
-      font-size: 11px;
-      margin-bottom: 2px;
-      line-height: 1.45;
+      font-size: 11.5px;
+      margin-bottom: 3px;
+      line-height: 1.6;
       color: #000;
       text-align: justify;
     }
 
     /* Educación */
-    .edu-item { margin-bottom: 12px; }
-    .edu-item .edu-header { display: flex; justify-content: space-between; align-items: baseline; }
-    .edu-item .edu-title { font-weight: bold; font-size: 12px; }
-    .edu-item .edu-dates { font-size: 11px; color: #555; white-space: nowrap; }
-    .edu-item .edu-sub { font-size: 11.5px; font-style: italic; color: #444; }
-    .edu-item .edu-detail { font-size: 11.5px; color: #444; }
+    .edu-item {
+      margin-bottom: 12px;
+    }
+
+    .edu-item .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .edu-item .edu-title {
+      font-weight: bold;
+      font-size: 12px;
+    }
+
+    .edu-item .edu-dates {
+      font-size: 11px;
+      color: #555;
+      white-space: nowrap;
+    }
+
+    .edu-item .edu-sub {
+      font-size: 11.5px;
+      font-style: italic;
+      color: #444;
+    }
+
+    .edu-item .edu-detail {
+      font-size: 11.5px;
+      color: #444;
+    }
 
     /* Voluntariado */
-    .vol-list { list-style: none; padding: 0; }
-    .vol-list li { font-size: 12px; line-height: 1.65; color: #333; padding-left: 14px; position: relative; margin-bottom: 5px; }
-    .vol-list li::before { content: '▪'; position: absolute; left: 0; color: #2a7a7a; }
+    .vol-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .vol-list li {
+      font-size: 12px;
+      line-height: 1.65;
+      color: #333;
+      padding-left: 14px;
+      position: relative;
+      margin-bottom: 5px;
+    }
+
+    .vol-list li::before {
+      content: '▪';
+      position: absolute;
+      left: 0;
+      color: #2a7a7a;
+    }
 
     /* ── SKILL CARDS ── */
     .skill-card {
       background: #fff;
       border: 1px solid #c8e6e6;
-      border-radius: 5px;
-      padding: 5px 8px;
-      margin-bottom: 5px;
+      border-radius: 6px;
+      padding: 8px 10px;
+      margin-bottom: 8px;
     }
 
     .skill-card-title {
-      font-size: 10px;
+      font-size: 11.5px;
       font-weight: 600;
       color: #2a7a7a;
       border-bottom: 1px solid #c8e6e6;
-      padding-bottom: 3px;
-      margin-bottom: 5px;
+      padding-bottom: 4px;
+      margin-bottom: 8px;
     }
 
-    .skill-icons { display: flex; flex-wrap: wrap; gap: 5px 8px; }
+    .skill-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 10px;
+    }
 
     .skill-icon-item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 2px;
-      width: 38px;
+      gap: 3px;
+      width: 44px;
     }
 
-    .skill-icon-item img { width: 26px; height: 26px; object-fit: contain; }
-    .skill-icon-item span { font-size: 8px; text-align: center; color: #333; line-height: 1.2; }
+    .skill-icon-item img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+
+    .skill-icon-item span {
+      font-size: 9px;
+      text-align: center;
+      color: #333;
+      line-height: 1.2;
+    }
 
     .interest-tag {
       background: #fff;
       border: 1px solid #b2d8d8;
-      border-radius: 4px;
-      padding: 3px 7px;
-      font-size: 9.5px;
+      border-radius: 5px;
+      padding: 5px 9px;
+      font-size: 11px;
       color: #1a5f5f;
       font-weight: 500;
     }
@@ -251,11 +350,6 @@
       body { background: #fff; }
       .page { margin: 0; box-shadow: none; }
     }
-
-    @page {
-      margin: 0;
-      size: A4;
-    }
   </style>
 </head>
 <body>
@@ -263,7 +357,10 @@
 
   <!-- HEADER -->
   <div class="header">
+    <!-- Reemplaza la ruta con tu foto, o elimina el bloque si no tienes -->
+    <!-- <div class="avatar-placeholder">Tu foto</div> -->
     <img src="../img/IMG_3145.jpg" alt="Foto de perfil" />
+
     <h1>Iñigo Díez Osúa</h1>
     <div class="subtitle">Estudiante de Química &nbsp;·&nbsp; Análisis de Datos &nbsp;·&nbsp; Machine Learning &nbsp;·&nbsp; Estadística Aplicada</div>
   </div>
@@ -278,9 +375,9 @@
         <h2>Contacto</h2>
         <div class="contact-item"><span class="icon">✉</span> <a href="mailto:idiezosua@gmail.com">idiezosua@gmail.com</a></div>
         <div class="contact-item"><span class="icon">📍</span> País Vasco, España</div>
-        <div class="contact-item"><span class="icon">🐙</span> <a href="https://github.com/inigo-diez" target="_blank">github.com/inigo-diez</a></div>
+        <div class="contact-item"><span class="icon">🌐</span> <a href="https://github.com/inigo-diez" target="_blank">GitHub</a></div>
         <div style="margin-top:10px; background:#e8f6f6; border:1px solid #b2d8d8; border-radius:5px; padding:7px 10px; text-align:center;">
-          <span style="font-size:11.5px; color:#1a5f5f;">Portfolio: </span><a href="https://inigo-diez.github.io" target="_blank" style="font-size:11.5px; color:#2a7a7a; font-weight:700; text-decoration:underline;">inigo-diez.github.io</a>
+          <span style="font-size:11.5px; color:#1a5f5f;">Para más información visita mi </span><a href="#" style="font-size:11.5px; color:#2a7a7a; font-weight:700; text-decoration:underline;">Portfolio</a>
         </div>
       </section>
 
@@ -419,8 +516,10 @@
             <p style="font-style:italic; font-weight:600; font-size:12px; color:#2a7a7a; margin-bottom:8px;">
               Eje microbiota-cerebro: Análisis metabolómico mediante GC-MS para la identificación de biomarcadores potenciales asociados a esquizofrenia
             </p>
-            <p>— Diseño experimental, optimización de condiciones GC-MS y procesamiento de datos cromatográficos mediante extracción de variables, limpieza de datasets y análisis estadístico multivariante.</p>
-            <p>— Comparación de perfiles metabolómicos entre grupos muestrales para la identificación de patrones diferenciales y biomarcadores potenciales asociados a esquizofrenia.</p>
+            <p>— Desarrollo de un proyecto de metabolómica experimental y analítica basado en GC-MS, orientado al estudio de compuestos potencialmente relevantes en el eje microbiota-cerebro.</p>
+            <p>— Diseño y optimización de condiciones experimentales mediante análisis sistemático de variables, evaluando su impacto sobre la detección de metabolitos y la robustez analítica.</p>
+            <p>— Procesamiento de datos cromatográficos mediante extracción de variables cuantitativas, limpieza y estructuración de datasets, y aplicación de análisis estadístico y multivariante.</p>
+            <p>— Comparación e interpretación de perfiles metabolómicos entre grupos de muestras para la identificación de patrones diferenciales y biomarcadores potenciales.</p>
           </div>
         </div>
 
@@ -437,6 +536,9 @@
               <span class="company">· DataCamp</span>
             </div>
           </div>
+          <div class="exp-body">
+            <p>Fundamentos de Python, manipulación de datos con pandas, unión de datasets, análisis exploratorio, visualización de datos.</p>
+          </div>
         </div>
 
         <div class="exp-item">
@@ -446,6 +548,9 @@
               <strong>Programa Statistics Fundamentals in Python</strong>
               <span class="company">· DataCamp</span>
             </div>
+          </div>
+          <div class="exp-body">
+            <p>Estadística descriptiva, probabilidad, muestreo, inferencia estadística, contrastes de hipótesis, regresión lineal y logística, aplicación a datasets reales.</p>
           </div>
         </div>
 
@@ -457,15 +562,21 @@
               <span class="company">· DataCamp</span>
             </div>
           </div>
+          <div class="exp-body">
+            <p>Diseño experimental, A/B testing, inferencia estadística, análisis bayesiano, toma de decisiones basada en datos.</p>
+          </div>
         </div>
 
         <div class="exp-item">
-          <div class="exp-header">
+          <div class="exp-header" style="flex-direction: column; align-items: flex-start; gap: 2px;">
             <div class="title-line">
               <span class="bullet">▪</span>
               <strong>Machine Learning Specialization (Andrew Ng)</strong>
               <span class="company">· Stanford University</span>
             </div>
+          </div>
+          <div class="exp-body">
+            <p>Fundamentos de aprendizaje automático, modelos supervisados, evaluación y validación de modelos.</p>
           </div>
         </div>
 
@@ -477,6 +588,9 @@
               <span class="company">· DataCamp</span>
             </div>
           </div>
+          <div class="exp-body">
+            <p>Fundamentos de SQL: selección, filtrado, agregación, combinación de tablas, funciones de ventana y diseño de bases de datos.</p>
+          </div>
         </div>
 
         <div class="exp-item">
@@ -485,6 +599,9 @@
               <span class="bullet">▪</span>
               <strong>Programa de 0 a Data Scientist: Python, Machine Learning y Negocio</strong>
             </div>
+          </div>
+          <div class="exp-body">
+            <p>Python, manipulación de datos, estadística, análisis exploratorio, feature engineering, clasificación, regresión y proyecto final sobre datos reales.</p>
           </div>
         </div>
 
@@ -498,12 +615,14 @@
             <div class="title-line">
               <span class="bullet">▪</span>
               <strong>Metabolómica y biomarcadores en salud mental</strong>
-              <span class="company">· <a href="https://github.com/inigo-diez" target="_blank">GitHub</a>, Proyecto TFG</span>
+              <span class="company">· GitHub, proyecto derivado del TFG</span>
             </div>
           </div>
           <div class="exp-body">
-            <p>— Estudio computacional del eje microbiota-intestino-cerebro mediante análisis de datos GC-MS e integración de bases de datos científicas para la identificación de metabolitos candidatos asociados a esquizofrenia.</p>
-            <p>— Aplicación de PCA, PLS, clustering, Gaussian Process y modelos supervisados (scikit-learn, XGBoost, SHAP) sobre datasets cromatográficos con optimización experimental RSM/CCD.</p>
+            <p>— Análisis computacional de datos GC-MS para el estudio de compuestos volátiles potencialmente asociados al eje microbiota-intestino-cerebro.</p>
+            <p>— Integración de bases de datos científicas abiertas y construcción de una base de datos propia de metabolitos.</p>
+            <p>— Aplicación de análisis multivariante, machine learning supervisado y optimización experimental para priorización de metabolitos candidatos.</p>
+            <p style="margin-top:6px; color:#2a7a7a;"><strong>Herramientas: Python, pandas, NumPy, scikit-learn, XGBoost, SHAP, SciPy, Matplotlib, Seaborn, PCA, clustering, Gaussian Process, PLS, APIs científicas, RSM/CCD.</strong></p>
           </div>
         </div>
 
@@ -512,12 +631,14 @@
             <div class="title-line">
               <span class="bullet">▪</span>
               <strong>Geopolítica, petróleo WTI y mercados financieros</strong>
-              <span class="company">· <a href="https://github.com/inigo-diez" target="_blank">GitHub</a>, proyecto propio</span>
+              <span class="company">· GitHub, proyecto propio</span>
             </div>
           </div>
           <div class="exp-body">
             <p>— Desarrollo de modelos cuantitativos para analizar la relación entre eventos geopolíticos y episodios de estrés en el mercado del crudo.</p>
-            <p>— Ingeniería de variables sobre series temporales financieras e integración de fuentes externas mediante APIs.</p>
+            <p>— Ingeniería de variables sobre series temporales financieras y datos de noticias globales, junto con simulación y validación de modelos.</p>
+            <p>— Integración de fuentes externas mediante APIs y evaluación de predicciones sobre datos reales de mercado.</p>
+            <p style="margin-top:6px; color:#2a7a7a;"><strong>Herramientas: Python, pandas, NumPy, scikit-learn, SHAP, Matplotlib, SciPy, Monte Carlo, Gaussian Process Regression, yfinance, APIs.</strong></p>
           </div>
         </div>
 
@@ -526,16 +647,19 @@
             <div class="title-line">
               <span class="bullet">▪</span>
               <strong>Machine learning aplicado a datasets reales</strong>
-              <span class="company">· <a href="https://github.com/inigo-diez" target="_blank">GitHub</a>, proyectos de práctica</span>
+              <span class="company">· GitHub, proyectos de práctica</span>
             </div>
           </div>
           <div class="exp-body">
-            <p>— Proyectos de clasificación, regresión y segmentación sobre riesgo crediticio, valoración de vehículos y pricing en e-commerce.</p>
-            <p>— EDA, feature engineering, comparación de modelos y recogida de datos mediante scraping.</p>
+            <p>— Desarrollo de proyectos de clasificación, regresión y segmentación sobre problemas reales de riesgo crediticio, valoración de vehículos y pricing en e-commerce.</p>
+            <p>— Realización de EDA, feature engineering, comparación de modelos y evaluación de rendimiento.</p>
+            <p>— Recogida y preparación de datos mediante scraping y tratamiento de variables categóricas y numéricas mixtas.</p>
+            <p style="margin-top:6px; color:#2a7a7a;"><strong>Herramientas: Python, pandas, NumPy, scikit-learn, XGBoost, Random Forest, TensorFlow/Keras, K-Means, Matplotlib, Seaborn, Web Scraping.</strong></p>
           </div>
         </div>
 
       </section>
+
 
     </main>
   </div><!-- /body -->
