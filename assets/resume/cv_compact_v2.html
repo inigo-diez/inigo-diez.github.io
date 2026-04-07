@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV - Iñigo Díez Osúa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #222;
+      background: #f0f0f0;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      margin: 20px auto;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      text-align: center;
+      padding: 14px 40px 12px;
+      border-bottom: 1px solid #b2d8d8;
+      background: linear-gradient(135deg, #d4eeee 0%, #e8f6f6 100%);
+    }
+
+    .header img {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 15%;
+      margin-bottom: 7px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border: 3px solid #2a7a7a;
+    }
+
+    .header .avatar-placeholder {
+      width: 90px;
+      height: 120px;
+      border-radius: 50%;
+      background: #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: #666;
+      margin: 0 auto 10px;
+    }
+
+    .header h1 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .header .subtitle {
+      font-size: 12px;
+      font-weight: 600;
+      color: #2a7a7a;
+      margin-top: 4px;
+      font-style: normal;
+      letter-spacing: 0.2px;
+    }
+
+    /* ── BODY: sidebar + main ── */
+    .body {
+      display: flex;
+      flex: 1;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      width: 38%;
+      padding: 12px 14px;
+      border-right: 1px solid #b2d8d8;
+      background: #f0fafa;
+      overflow: hidden;
+    }
+
+    .sidebar section {
+      margin-bottom: 10px;
+    }
+
+    .sidebar h2 {
+      font-size: 12px;
+      font-weight: bold;
+      color: #2a7a7a;
+      text-transform: none;
+      border-bottom: none;
+      margin-bottom: 8px;
+      letter-spacing: 0.3px;
+    }
+
+    .sidebar p,
+    .sidebar li {
+      font-size: 12px;
+      line-height: 1.6;
+      color: #333;
+      text-align: justify;
+    }
+
+    .sidebar ul { list-style: none; padding: 0; }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+      font-size: 12px;
+    }
+
+    .contact-item .icon { font-size: 13px; width: 16px; text-align: center; }
+    .contact-item a { color: #2a7a7a; text-decoration: none; }
+
+    .langs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+      font-size: 12px;
+    }
+
+    .skills-group { margin-bottom: 8px; }
+    .skills-group .group-title { font-weight: bold; font-size: 12px; margin-bottom: 3px; }
+    .skills-group .tags { font-size: 11.5px; color: #444; line-height: 1.7; }
+
+    /* ── MAIN CONTENT ── */
+    .main {
+      width: 62%;
+      padding: 14px 20px;
+    }
+
+    .main section { margin-bottom: 13px; }
+
+    .main h2 {
+      font-size: 13px;
+      font-weight: bold;
+      color: #2a7a7a;
+      border-bottom: 1px solid #2a7a7a;
+      padding-bottom: 3px;
+      margin-bottom: 10px;
+      letter-spacing: 0.2px;
+    }
+
+    .main p {
+      font-size: 11.5px;
+      line-height: 1.5;
+      color: #000;
+      margin-bottom: 4px;
+      text-align: justify;
+    }
+
+    /* Experiencia */
+    .exp-item { margin-bottom: 8px; }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .exp-header .title-line {
+      font-size: 12px;
+      display: block;
+      line-height: 1.5;
+    }
+
+    .exp-header .title-line .bullet { color: #2a7a7a; font-size: 14px; margin-right: 2px; }
+    .exp-header .title-line strong { font-size: 12px; }
+    .exp-header .title-line .company { font-size: 12px; color: #000; }
+    .exp-header .dates { font-size: 11px; color: #555; white-space: nowrap; }
+
+    .exp-body { padding-left: 14px; }
+
+    .exp-body p {
+      font-size: 11px;
+      margin-bottom: 2px;
+      line-height: 1.45;
+      color: #000;
+      text-align: justify;
+    }
+
+    /* Educación */
+    .edu-item { margin-bottom: 12px; }
+    .edu-item .edu-header { display: flex; justify-content: space-between; align-items: baseline; }
+    .edu-item .edu-title { font-weight: bold; font-size: 12px; }
+    .edu-item .edu-dates { font-size: 11px; color: #555; white-space: nowrap; }
+    .edu-item .edu-sub { font-size: 11.5px; font-style: italic; color: #444; }
+    .edu-item .edu-detail { font-size: 11.5px; color: #444; }
+
+    /* Voluntariado */
+    .vol-list { list-style: none; padding: 0; }
+    .vol-list li { font-size: 12px; line-height: 1.65; color: #333; padding-left: 14px; position: relative; margin-bottom: 5px; }
+    .vol-list li::before { content: '▪'; position: absolute; left: 0; color: #2a7a7a; }
+
+    /* ── SKILL CARDS ── */
+    .skill-card {
+      background: #fff;
+      border: 1px solid #c8e6e6;
+      border-radius: 5px;
+      padding: 5px 8px;
+      margin-bottom: 5px;
+    }
+
+    .skill-card-title {
+      font-size: 10px;
+      font-weight: 600;
+      color: #2a7a7a;
+      border-bottom: 1px solid #c8e6e6;
+      padding-bottom: 3px;
+      margin-bottom: 5px;
+    }
+
+    .skill-icons { display: flex; flex-wrap: wrap; gap: 5px 8px; }
+
+    .skill-icon-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      width: 38px;
+    }
+
+    .skill-icon-item img { width: 26px; height: 26px; object-fit: contain; }
+    .skill-icon-item span { font-size: 8px; text-align: center; color: #333; line-height: 1.2; }
+
+    .interest-tag {
+      background: #fff;
+      border: 1px solid #b2d8d8;
+      border-radius: 4px;
+      padding: 3px 7px;
+      font-size: 9.5px;
+      color: #1a5f5f;
+      font-weight: 500;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { margin: 0; box-shadow: none; }
+    }
+
+    @page {
+      margin: 0;
+      size: A4;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <img src="C:/Users/LENOVO/Downloads/IMG_3145.jpg" alt="Foto de perfil" />
+    <h1>Iñigo Díez Osúa</h1>
+    <div class="subtitle">Estudiante de Química &nbsp;·&nbsp; Análisis de Datos &nbsp;·&nbsp; Machine Learning &nbsp;·&nbsp; Estadística Aplicada</div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <section>
+        <h2>Contacto</h2>
+        <div class="contact-item"><span class="icon">✉</span> <a href="mailto:idiezosua@gmail.com">idiezosua@gmail.com</a></div>
+        <div class="contact-item"><span class="icon">📍</span> País Vasco, España</div>
+        <div class="contact-item"><span class="icon">🐙</span> <a href="https://github.com/inigo-diez" target="_blank">github.com/inigo-diez</a></div>
+        <div style="margin-top:10px; background:#e8f6f6; border:1px solid #b2d8d8; border-radius:5px; padding:7px 10px; text-align:center;">
+          <span style="font-size:11.5px; color:#1a5f5f;">Portfolio: </span><a href="https://inigo-diez.github.io" target="_blank" style="font-size:11.5px; color:#2a7a7a; font-weight:700; text-decoration:underline;">inigo-diez.github.io</a>
+        </div>
+      </section>
+
+      <section>
+        <h2>Idiomas</h2>
+        <div class="langs">
+          <span>Español (Nativo)</span>
+          <span>Inglés (B2)</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Habilidades</h2>
+
+        <div class="skill-card">
+          <div class="skill-card-title">Lenguajes</div>
+          <div class="skill-icons">
+            <div class="skill-icon-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/>
+              <span>Python</span>
+            </div>
+            <div class="skill-icon-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL"/>
+              <span>SQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-title">Librerías</div>
+          <div class="skill-icons">
+            <div class="skill-icon-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy"/>
+              <span>NumPy</span>
+            </div>
+            <div class="skill-icon-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas"/>
+              <span>Pandas</span>
+            </div>
+            <div class="skill-icon-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn"/>
+              <span>Scikit-learn</span>
+            </div>
+            <div class="skill-icon-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" alt="Matplotlib"/>
+              <span>Matplotlib</span>
+            </div>
+            <div class="skill-icon-item">
+              <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="Seaborn"/>
+              <span>Seaborn</span>
+            </div>
+            <div class="skill-icon-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/SCIPY_2.svg" alt="SciPy"/>
+              <span>SciPy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-title">Frameworks / ML</div>
+          <div class="skill-icons">
+            <div class="skill-icon-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow"/>
+              <span>TensorFlow</span>
+            </div>
+            <div class="skill-icon-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Keras_logo.svg" alt="Keras"/>
+              <span>Keras</span>
+            </div>
+            <div class="skill-icon-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/XGBoost_logo.png" alt="XGBoost"/>
+              <span>XGBoost</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-title">Herramientas</div>
+          <div class="skill-icons">
+            <div class="skill-icon-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"/>
+              <span>Git</span>
+            </div>
+            <div class="skill-icon-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter"/>
+              <span>Jupyter</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section>
+        <h2>Intereses</h2>
+        <div style="display:flex; flex-direction:column; gap:5px;">
+          <div class="interest-tag">Data Science aplicado a investigación científica</div>
+          <div class="interest-tag">Estadística aplicada y modelización</div>
+          <div class="interest-tag">Machine Learning en problemas reales</div>
+          <div class="interest-tag">Análisis cuantitativo de datos</div>
+        </div>
+      </section>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <section>
+        <h2>Perfil Académico</h2>
+        <p>
+          Estudiante de 4.º curso del Grado en Química en la UPV/EHU, con experiencia en el análisis de datos experimentales obtenidos mediante técnicas analíticas. Mi formación complementaria en Python, estadística aplicada y machine learning ha reforzado mi interés por orientar mi trayectoria hacia la ciencia de datos, con especial interés en la aplicación de métodos cuantitativos y computacionales al análisis e interpretación de datos complejos.
+        </p>
+      </section>
+
+      <section>
+        <h2>Formación Académica</h2>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="title-line">
+              <span class="bullet">▪</span>
+              <strong>Grado en Química</strong>
+              <span class="company">· Universidad del País Vasco (EHU/UPV)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item" style="margin-top:8px;">
+          <div class="exp-header">
+            <div class="title-line">
+              <span class="bullet">▪</span>
+              <strong>Trabajo Fin de Grado</strong>
+            </div>
+          </div>
+          <div class="exp-body" style="margin-top:4px;">
+            <p style="font-style:italic; font-weight:600; font-size:12px; color:#2a7a7a; margin-bottom:8px;">
+              Eje microbiota-cerebro: Análisis metabolómico mediante GC-MS para la identificación de biomarcadores potenciales asociados a esquizofrenia
+            </p>
+            <p>— Diseño experimental, optimización de condiciones GC-MS y procesamiento de datos cromatográficos mediante extracción de variables, limpieza de datasets y análisis estadístico multivariante.</p>
+            <p>— Comparación de perfiles metabolómicos entre grupos muestrales para la identificación de patrones diferenciales y biomarcadores potenciales asociados a esquizofrenia.</p>
+          </div>
+        </div>
+
+      </section>
+
+      <section>
+        <h2>Formación Complementaria</h2>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="title-line">
+              <span class="bullet">▪</span>
+              <strong>Programa Python Data Fundamentals</strong>
+              <span class="company">· DataCamp</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="title-line">
+              <span class="bullet">▪</span>
+              <strong>Programa Statistics Fundamentals in Python</strong>
+              <span class="company">· DataCamp</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="title-line">
+              <span class="bullet">▪</span>
+              <strong>Programa Applied Statistics in Python</strong>
+              <span class="company">· DataCamp</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="title-line">
+              <span class="bullet">▪</span>
+              <strong>Machine Learning Specialization (Andrew Ng)</strong>
+              <span class="company">· Stanford University</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="title-line">
+              <span class="bullet">▪</span>
+              <strong>Programa SQL Fundamentals</strong>
+              <span class="company">· DataCamp</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="title-line">
+              <span class="bullet">▪</span>
+              <strong>Programa de 0 a Data Scientist: Python, Machine Learning y Negocio</strong>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section>
+        <h2>Proyectos Técnicos</h2>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="title-line">
+              <span class="bullet">▪</span>
+              <strong>Metabolómica y biomarcadores en salud mental</strong>
+              <span class="company">· GitHub, Proyecto TFG</span>
+            </div>
+          </div>
+          <div class="exp-body">
+            <p>— Estudio computacional del eje microbiota-intestino-cerebro mediante análisis de datos GC-MS e integración de bases de datos científicas para la identificación de metabolitos candidatos asociados a esquizofrenia.</p>
+            <p>— Aplicación de PCA, PLS, clustering, Gaussian Process y modelos supervisados (scikit-learn, XGBoost, SHAP) sobre datasets cromatográficos con optimización experimental RSM/CCD.</p>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="title-line">
+              <span class="bullet">▪</span>
+              <strong>Geopolítica, petróleo WTI y mercados financieros</strong>
+              <span class="company">· GitHub, proyecto propio</span>
+            </div>
+          </div>
+          <div class="exp-body">
+            <p>— Desarrollo de modelos cuantitativos para analizar la relación entre eventos geopolíticos y episodios de estrés en el mercado del crudo.</p>
+            <p>— Ingeniería de variables sobre series temporales financieras e integración de fuentes externas mediante APIs.</p>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="title-line">
+              <span class="bullet">▪</span>
+              <strong>Machine learning aplicado a datasets reales</strong>
+              <span class="company">· GitHub, proyectos de práctica</span>
+            </div>
+          </div>
+          <div class="exp-body">
+            <p>— Proyectos de clasificación, regresión y segmentación sobre riesgo crediticio, valoración de vehículos y pricing en e-commerce.</p>
+            <p>— EDA, feature engineering, comparación de modelos y recogida de datos mediante scraping.</p>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+  </div><!-- /body -->
+
+</div><!-- /page -->
+</body>
+</html>
+
+
