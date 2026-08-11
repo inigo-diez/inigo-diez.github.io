@@ -691,6 +691,14 @@ p, li, .flow-text {
   text-align: justify;
 }
 
+/* About — skills list (Materialize resets ul outside .card) */
+.about-list li {
+  line-height: 200%;
+  list-style-type: disc;
+  margin-left: 24px;
+  text-align: left;
+}
+
 /* Project cards — equal height per row, no content loss */
 #projects .row {
   display: flex !important;
@@ -818,17 +826,4 @@ p, li, .flow-text {
 }
 .project-gh-btn i {
   margin-right: 5px;
-}
-.project-title-hint {
-  display: inline-block;
-  font-size: 0.73rem;
-  color: #00695c;
-  font-weight: 600;
-  margin-top: 5px;
-  margin-bottom: 2px;
-  background-color: #e0f2f1;
-  border: 1px solid #b2dfdb;
-  border-radius: 20px;
-  padding: 2px 10px;
-  letter-spacing: 0.01em;
 }
