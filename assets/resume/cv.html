@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV - Iñigo Díez Osúa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #222;
+      background: #f0f0f0;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      margin: 20px auto;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+
+    a { color: inherit; }
+
+    /* ── HEADER ── */
+    .header {
+      text-align: center;
+      padding: 13px 40px 11px;
+      border-bottom: 1px solid #b2d8d8;
+      background: linear-gradient(135deg, #d4eeee 0%, #e8f6f6 100%);
+    }
+
+    .header img {
+      width: 86px;
+      height: 86px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 15%;
+      margin: 0 auto 6px;
+      display: block;
+      border: 3px solid #2a7a7a;
+    }
+
+    .header h1 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .header .subtitle {
+      font-size: 12px;
+      font-weight: 600;
+      color: #2a7a7a;
+      margin-top: 4px;
+      letter-spacing: 0.2px;
+    }
+
+    /* ── BODY: sidebar + main ── */
+    .body {
+      display: flex;
+      flex: 1;
+      min-height: 0;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      width: 32%;
+      padding: 12px 14px;
+      border-right: 1px solid #b2d8d8;
+      background: #f0fafa;
+    }
+
+    .sidebar section { margin-bottom: 16px; }
+
+    .sidebar h2 {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      color: #2a7a7a;
+      border-bottom: 2px solid #2a7a7a;
+      padding-bottom: 1px;
+      margin-bottom: 7px;
+      letter-spacing: 0.2px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+      font-size: 11px;
+    }
+
+    .contact-item .icon { font-size: 12px; width: 14px; text-align: center; color: #333; }
+    .contact-item img { width: 14px; height: 14px; flex-shrink: 0; }
+    .contact-item a { color: #2a7a7a; text-decoration: none; }
+
+    .portfolio-box {
+      margin-top: 8px;
+      background: #e8f6f6;
+      border: 1px solid #b2d8d8;
+      border-radius: 5px;
+      padding: 6px 9px;
+      font-size: 10.5px;
+      color: #1a5f5f;
+    }
+
+    .portfolio-box a { color: #2a7a7a; font-weight: 700; }
+
+    .langs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 14px;
+      font-size: 11px;
+    }
+
+    /* ── SKILL CARDS ── */
+    .skill-card {
+      background: #fff;
+      border: 1px solid #c8e6e6;
+      border-radius: 5px;
+      padding: 5px 8px;
+      margin-bottom: 5px;
+    }
+
+    .skill-card-title {
+      font-size: 10px;
+      font-weight: 600;
+      color: #2a7a7a;
+      border-bottom: 1px solid #c8e6e6;
+      padding-bottom: 3px;
+      margin-bottom: 5px;
+    }
+
+    .skill-icons { display: flex; flex-wrap: wrap; gap: 5px 6px; }
+
+    .skill-icon-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      width: 40px;
+    }
+
+    .skill-icon-item img { width: 24px; height: 24px; object-fit: contain; }
+    .skill-icon-item span { font-size: 8px; text-align: center; color: #333; line-height: 1.2; }
+
+    .interest-tag {
+      background: #fff;
+      border: 1px solid #b2d8d8;
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-size: 9.5px;
+      color: #1a5f5f;
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
+    .interests { display: flex; flex-direction: column; gap: 5px; }
+
+    /* ── MAIN CONTENT ── */
+    .main {
+      width: 68%;
+      padding: 12px 18px;
+    }
+
+    .main section { margin-bottom: 10px; }
+
+    .main h2 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #2a7a7a;
+      border-bottom: 1px solid #2a7a7a;
+      padding-bottom: 3px;
+      margin-bottom: 7px;
+      letter-spacing: 0.2px;
+    }
+
+    .main p {
+      font-size: 11.5px;
+      line-height: 1.5;
+      color: #000;
+      margin-bottom: 3px;
+      text-align: justify;
+    }
+
+    .item { margin-bottom: 6px; }
+
+    .item-title {
+      font-size: 11.5px;
+      line-height: 1.45;
+      margin-bottom: 2px;
+    }
+
+    .item-title .bullet { color: #2a7a7a; font-size: 13px; margin-right: 3px; }
+    .item-title .dates { font-size: 10.5px; color: #555; margin-left: 6px; }
+
+    .item-title a {
+      color: #000;
+      text-decoration: underline;
+      text-decoration-color: #2a7a7a;
+      text-underline-offset: 2px;
+    }
+
+    .item-title .gh {
+      width: 11px;
+      height: 11px;
+      margin-left: 4px;
+      vertical-align: -1px;
+    }
+
+    .item-body { padding-left: 12px; }
+
+    .item-body p { font-size: 11px; line-height: 1.47; margin-bottom: 2px; }
+
+    .item-body .tfg-title {
+      font-style: italic;
+      font-weight: 600;
+      font-size: 11.5px;
+      color: #2a7a7a;
+      margin-bottom: 4px;
+    }
+
+    .courses {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px 12px;
+      list-style: none;
+    }
+
+    .courses li {
+      font-size: 10.5px;
+      line-height: 1.4;
+      padding-left: 10px;
+      position: relative;
+    }
+
+    .courses li::before {
+      content: '▪';
+      position: absolute;
+      left: 0;
+      color: #2a7a7a;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { margin: 0; box-shadow: none; }
+    }
+
+    @page {
+      margin: 0;
+      size: A4;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <img src="../img/IMG_3145.jpg" alt="Foto de perfil" />
+    <h1>Iñigo Díez Osúa</h1>
+    <div class="subtitle">Graduado en Química &nbsp;·&nbsp; Ciencia de Datos &nbsp;·&nbsp; Estadística &nbsp;·&nbsp; Machine Learning</div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <section>
+        <h2>Contacto</h2>
+        <div class="contact-item"><span class="icon">✉</span> <a href="mailto:idiezosua@gmail.com">idiezosua@gmail.com</a></div>
+        <div class="contact-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/> <a href="https://github.com/inigo-diez" target="_blank">GitHub</a></div>
+        <div class="contact-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn"/> <a href="https://www.linkedin.com/in/i%C3%B1igo-d%C3%ADez-os%C3%BAa-233642401/" target="_blank">LinkedIn</a></div>
+        <div class="portfolio-box">
+          Visita mi portfolio: <a href="https://inigo-diez.github.io" target="_blank">inigo-diez.github.io</a>
+        </div>
+      </section>
+
+      <section>
+        <h2>Idiomas</h2>
+        <div class="langs">
+          <span>Español — Nativo</span>
+          <span>Inglés — B2</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Competencias técnicas</h2>
+
+        <div class="skill-card">
+          <div class="skill-card-title">Lenguajes</div>
+          <div class="skill-icons">
+            <div class="skill-icon-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/>
+              <span>Python</span>
+            </div>
+            <div class="skill-icon-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL"/>
+              <span>SQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-title">Librerías</div>
+          <div class="skill-icons">
+            <div class="skill-icon-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy"/>
+              <span>NumPy</span>
+            </div>
+            <div class="skill-icon-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas"/>
+              <span>Pandas</span>
+            </div>
+            <div class="skill-icon-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn"/>
+              <span>Scikit-learn</span>
+            </div>
+            <div class="skill-icon-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" alt="Matplotlib"/>
+              <span>Matplotlib</span>
+            </div>
+            <div class="skill-icon-item">
+              <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="Seaborn"/>
+              <span>Seaborn</span>
+            </div>
+            <div class="skill-icon-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/SCIPY_2.svg" alt="SciPy"/>
+              <span>SciPy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-title">Frameworks / ML</div>
+          <div class="skill-icons">
+            <div class="skill-icon-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow"/>
+              <span>TensorFlow</span>
+            </div>
+            <div class="skill-icon-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" alt="Keras"/>
+              <span>Keras</span>
+            </div>
+            <div class="skill-icon-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/XGBoost_logo.png" alt="XGBoost"/>
+              <span>XGBoost</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-title">Herramientas</div>
+          <div class="skill-icons">
+            <div class="skill-icon-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"/>
+              <span>Git</span>
+            </div>
+            <div class="skill-icon-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter"/>
+              <span>Jupyter</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Áreas de interés</h2>
+        <div class="interests">
+          <div class="interest-tag">Ciencia de datos aplicada a la investigación científica</div>
+          <div class="interest-tag">Estadística y modelización predictiva</div>
+          <div class="interest-tag">Machine learning e interpretación de modelos</div>
+          <div class="interest-tag">Análisis de series temporales</div>
+        </div>
+      </section>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <section>
+        <h2>Perfil profesional</h2>
+        <p>
+          Graduado en Química por la EHU, con un perfil cuantitativo orientado a la ciencia de datos y el machine learning. Experiencia académica en análisis de datos reales, estadística aplicada, diseño experimental y modelización predictiva. He desarrollado proyectos en Python que abarcan la preparación de datos, la comparación y validación de modelos y la interpretación de resultados. Combino el rigor del método científico con la programación para formular hipótesis, contrastarlas y obtener conclusiones fundamentadas.
+        </p>
+      </section>
+
+      <section>
+        <h2>Formación académica</h2>
+
+        <div class="item">
+          <div class="item-title">
+            <span class="bullet">▪</span><strong>Máster en Ciencia de Datos e Inteligencia Artificial</strong> · <strong>Afi</strong>
+            <span class="dates">sept. 2026 – jul. 2027</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-title">
+            <span class="bullet">▪</span><strong>Grado en Química</strong> · <strong>EHU (Universidad del País Vasco)</strong>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-title">
+            <span class="bullet">▪</span><strong>Trabajo Fin de Grado</strong>
+          </div>
+          <div class="item-body">
+            <p class="tfg-title">Análisis estadístico y modelización multivariante de datos metabolómicos</p>
+            <p>— Construcción, limpieza, transformación y preprocesamiento de conjuntos de datos experimentales reales para su posterior análisis.</p>
+            <p>— Análisis exploratorio y reducción de dimensionalidad mediante PCA, junto con modelización supervisada mediante PLS-DA.</p>
+            <p>— Evaluación de la capacidad predictiva y robustez de los modelos mediante validación cruzada, métricas R²/Q², tests de permutación y métodos de importancia de variables.</p>
+            <p>— Optimización multivariable mediante diseño de experimentos y metodología de superficies de respuesta, integrando técnicas estadísticas y computacionales para comparar grupos y extraer conclusiones interpretables.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Proyectos destacados</h2>
+
+        <div class="item">
+          <div class="item-title">
+            <span class="bullet">▪</span><strong><a href="https://github.com/inigo-diez/Analisis-Metabolomico-Estadistico-con-Python-2-Parte-" target="_blank">Análisis metabolómico e interpretación de modelos</a></strong><img class="gh" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/>
+          </div>
+          <div class="item-body">
+            <p>— Proyecto en Python desarrollado en paralelo al TFG sobre los mismos datos: 279 metabolitos en 17 condiciones experimentales. Preprocesamiento, PCA, clustering y contrastes con corrección FDR; comparación de Random Forest y XGBoost con validación cruzada e interpretación SHAP para identificar patrones y priorizar candidatos.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-title">
+            <span class="bullet">▪</span><strong><a href="https://github.com/inigo-diez/oil-market-stress-gdelt" target="_blank">Analítica predictiva de mercados y riesgo geopolítico</a></strong><img class="gh" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/>
+          </div>
+          <div class="item-body">
+            <p>— Integración de datos de mercado y noticias geopolíticas en Python para evaluar señales de tensión en el petróleo a un día. Análisis de 4.059 observaciones y construcción de 67 variables; comparación de modelos con validación temporal e interpretación de predicciones mediante SHAP.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-title">
+            <span class="bullet">▪</span><strong><a href="https://github.com/inigo-diez/prediccion-morosidad-crediticia" target="_blank">Clasificación de riesgo de morosidad crediticia</a></strong><img class="gh" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/>
+          </div>
+          <div class="item-body">
+            <p>— Análisis de datos socioeconómicos y crediticios de 8.399 clientes: tratamiento de valores ausentes y creación de indicadores de endeudamiento. Comparación y optimización de modelos mediante validación cruzada; evaluación con precisión, recall, F1 y ROC/AUC, y análisis de umbrales para estudiar la detección de morosos y las falsas alarmas.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="item-title">
+            <span class="bullet">▪</span><strong><a href="https://github.com/inigo-diez/car-price-prediction-ml" target="_blank">Predicción de precios de vehículos con machine learning</a></strong><img class="gh" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"/>
+          </div>
+          <div class="item-body">
+            <p>— Preparación de un conjunto inicial de 19.237 vehículos: corrección de formatos y tratamiento de valores ausentes y atípicos. Comparación de modelos de regresión, Random Forest, XGBoost y una red neuronal con TensorFlow/Keras. Optimización de XGBoost y evaluación mediante MAE, RMSE y R², con R² de 0,77 en test.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Formación Complementaria</h2>
+        <ul class="courses">
+          <li><strong>Python Data Fundamentals</strong> · DataCamp</li>
+          <li><strong>Statistics Fundamentals in Python</strong> · DataCamp</li>
+          <li><strong>Applied Statistics in Python</strong> · DataCamp</li>
+          <li><strong>Machine Learning Specialization</strong> · Andrew Ng</li>
+          <li><strong>SQL Fundamentals</strong> · DataCamp</li>
+          <li><strong>De 0 a Data Scientist: Python, ML y Negocio</strong></li>
+        </ul>
+      </section>
+
+    </main>
+  </div><!-- /body -->
+
+</div><!-- /page -->
+</body>
+</html>
