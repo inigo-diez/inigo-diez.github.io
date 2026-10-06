@@ -41,7 +41,7 @@
       height: 86px;
       border-radius: 50%;
       object-fit: cover;
-      object-position: center 15%;
+      object-position: center;
       margin: 0 auto 6px;
       display: block;
       border: 3px solid #2a7a7a;
@@ -151,18 +151,31 @@
     .skill-icon-item img { width: 24px; height: 24px; object-fit: contain; }
     .skill-icon-item span { font-size: 8px; text-align: center; color: #333; line-height: 1.2; }
 
+    .method-grid { display: flex; flex-wrap: wrap; gap: 7px 4px; justify-content: space-between; }
+
+    .method-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      width: 60px;
+    }
+
+    .method-item svg { width: 23px; height: 23px; }
+    .method-item span { font-size: 7.6px; text-align: center; color: #333; line-height: 1.2; }
+
     .interest-tag {
       background: #fff;
       border: 1px solid #b2d8d8;
       border-radius: 4px;
-      padding: 4px 8px;
+      padding: 3px 7px;
       font-size: 9.5px;
       color: #1a5f5f;
       font-weight: 500;
-      line-height: 1.35;
+      line-height: 1.3;
     }
 
-    .interests { display: flex; flex-direction: column; gap: 5px; }
+    .interests { display: flex; flex-direction: column; gap: 3px; }
 
     /* ── MAIN CONTENT ── */
     .main {
@@ -170,7 +183,7 @@
       padding: 12px 18px;
     }
 
-    .main section { margin-bottom: 10px; }
+    .main section { margin-bottom: 7px; }
 
     .main h2 {
       font-size: 13px;
@@ -178,7 +191,7 @@
       color: #2a7a7a;
       border-bottom: 1px solid #2a7a7a;
       padding-bottom: 3px;
-      margin-bottom: 7px;
+      margin-bottom: 6px;
       letter-spacing: 0.2px;
     }
 
@@ -190,7 +203,7 @@
       text-align: justify;
     }
 
-    .item { margin-bottom: 6px; }
+    .item { margin-bottom: 5px; }
 
     .item-title {
       font-size: 11.5px;
@@ -199,7 +212,12 @@
     }
 
     .item-title .bullet { color: #2a7a7a; font-size: 13px; margin-right: 3px; }
-    .item-title .dates { font-size: 10.5px; color: #555; margin-left: 6px; }
+    .item-title .dates {
+      display: block;
+      font-size: 10.5px;
+      color: #555;
+      margin: 1px 0 0 15px;
+    }
 
     .item-title a {
       color: #000;
@@ -230,7 +248,7 @@
     .courses {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 5px 12px;
+      gap: 4px 12px;
       list-style: none;
     }
 
@@ -240,6 +258,8 @@
       padding-left: 10px;
       position: relative;
     }
+
+    .courses a { color: inherit; text-decoration: none; }
 
     .courses li::before {
       content: '▪';
@@ -264,9 +284,9 @@
 
   <!-- HEADER -->
   <div class="header">
-    <img src="../img/IMG_3145.jpg" alt="Foto de perfil" />
+    <img src="../img/IMG_3145_cv.jpg" alt="Foto de perfil" />
     <h1>Iñigo Díez Osúa</h1>
-    <div class="subtitle">Graduado en Química &nbsp;·&nbsp; Ciencia de Datos &nbsp;·&nbsp; Estadística &nbsp;·&nbsp; Machine Learning</div>
+    <div class="subtitle">Junior Data Scientist &nbsp;|&nbsp; Python &nbsp;·&nbsp; Machine Learning &nbsp;·&nbsp; Estadística aplicada</div>
   </div>
 
   <!-- BODY -->
@@ -337,6 +357,10 @@
               <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/SCIPY_2.svg" alt="SciPy"/>
               <span>SciPy</span>
             </div>
+            <div class="skill-icon-item">
+              <img src="https://raw.githubusercontent.com/shap/shap/master/docs/artwork/shap_logo.png" alt="SHAP"/>
+              <span>SHAP</span>
+            </div>
           </div>
         </div>
 
@@ -371,15 +395,77 @@
             </div>
           </div>
         </div>
+
+        <div class="skill-card">
+          <div class="skill-card-title">Técnicas y métodos</div>
+          <div class="method-grid">
+            <div class="method-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#2a7a7a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3.5 3.5v17h17"/>
+                <path d="M6.5 16l4-4.5 3 2.5 3.5-6"/>
+                <path d="M17 8l3.5 2.5" stroke-dasharray="2.2 2"/>
+              </svg>
+              <span>Modelos predictivos</span>
+            </div>
+            <div class="method-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#2a7a7a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3.5 17.5a8.5 8.5 0 0 1 17 0"/>
+                <path d="M12 17.5l4-4.5"/>
+                <circle cx="12" cy="17.5" r="1.3" fill="#2a7a7a" stroke="none"/>
+              </svg>
+              <span>Clasificación y scoring</span>
+            </div>
+            <div class="method-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#2a7a7a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="6" cy="6.5" r="1.5" fill="#2a7a7a" stroke="none"/>
+                <circle cx="9.5" cy="4.5" r="1.5" fill="#2a7a7a" stroke="none"/>
+                <circle cx="6.5" cy="10.5" r="1.5" fill="#2a7a7a" stroke="none"/>
+                <circle cx="17.5" cy="8" r="1.5" fill="#2a7a7a" stroke="none"/>
+                <circle cx="19.5" cy="12" r="1.5" fill="#2a7a7a" stroke="none"/>
+                <circle cx="10" cy="18" r="1.5" fill="#2a7a7a" stroke="none"/>
+                <circle cx="14.5" cy="19.5" r="1.5" fill="#2a7a7a" stroke="none"/>
+                <circle cx="7.8" cy="7.5" r="5.2" stroke-dasharray="2.2 2"/>
+              </svg>
+              <span>Clustering y segmentación</span>
+            </div>
+            <div class="method-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#2a7a7a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3.5 5.5h12"/>
+                <path d="M3.5 10h7.5"/>
+                <path d="M3.5 14.5h10"/>
+                <circle cx="16" cy="16.5" r="4"/>
+                <path d="M19 19.5l2 2"/>
+              </svg>
+              <span>Interpretabilidad (XAI)</span>
+            </div>
+            <div class="method-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#2a7a7a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2.5 18.5h19"/>
+                <path d="M3.5 18.5c4 0 3.5-11 8.5-11s4.5 11 8.5 11"/>
+                <path d="M15.5 8.5v10" stroke-dasharray="2.2 2"/>
+              </svg>
+              <span>Contraste de hipótesis</span>
+            </div>
+            <div class="method-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#2a7a7a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3l8.5 4.5L12 12 3.5 7.5 12 3z"/>
+                <path d="M3.5 7.5v9L12 21l8.5-4.5v-9"/>
+                <path d="M12 12v9"/>
+              </svg>
+              <span>Diseño de experimentos</span>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section>
-        <h2>Áreas de interés</h2>
+        <h2>Intereses profesionales</h2>
         <div class="interests">
           <div class="interest-tag">Ciencia de datos aplicada a la investigación científica</div>
-          <div class="interest-tag">Estadística y modelización predictiva</div>
+          <div class="interest-tag">Análisis y visualización de datos</div>
+          <div class="interest-tag">Estadística aplicada y modelización predictiva</div>
           <div class="interest-tag">Machine learning e interpretación de modelos</div>
-          <div class="interest-tag">Análisis de series temporales</div>
+          <div class="interest-tag">Automatización y toma de decisiones basada en datos</div>
         </div>
       </section>
 
@@ -391,7 +477,7 @@
       <section>
         <h2>Perfil profesional</h2>
         <p>
-          Graduado en Química por la EHU, con un perfil cuantitativo orientado a la ciencia de datos y el machine learning. Experiencia académica en análisis de datos reales, estadística aplicada, diseño experimental y modelización predictiva. He desarrollado proyectos en Python que abarcan la preparación de datos, la comparación y validación de modelos y la interpretación de resultados. Combino el rigor del método científico con la programación para formular hipótesis, contrastarlas y obtener conclusiones fundamentadas.
+          Graduado en Química por la EHU y actualmente cursando el Máster en Ciencia de Datos e Inteligencia Artificial en Afi Global Education, con un perfil cuantitativo orientado a la ciencia de datos y el machine learning. Experiencia académica en análisis de datos reales, estadística aplicada, diseño experimental y modelización predictiva. He desarrollado proyectos en Python que abarcan la preparación de datos, la comparación y validación de modelos y la interpretación de resultados. Combino el rigor del método científico con la programación para formular hipótesis, contrastarlas y obtener conclusiones fundamentadas.
         </p>
       </section>
 
@@ -400,7 +486,7 @@
 
         <div class="item">
           <div class="item-title">
-            <span class="bullet">▪</span><strong>Máster en Ciencia de Datos e Inteligencia Artificial</strong> · <strong>Afi</strong>
+            <span class="bullet">▪</span><strong>Máster en Ciencia de Datos e Inteligencia Artificial</strong> · <strong>Afi Global Education</strong>
             <span class="dates">sept. 2026 – jul. 2027</span>
           </div>
         </div>
@@ -474,6 +560,7 @@
           <li><strong>Machine Learning Specialization</strong> · Andrew Ng</li>
           <li><strong>SQL Fundamentals</strong> · DataCamp</li>
           <li><strong>De 0 a Data Scientist: Python, ML y Negocio</strong></li>
+          <li><strong><a href="https://inigo-diez.github.io/assets/certificates/AI%20Engineering%20LongChain.pdf" target="_blank">AI Engineering with LangChain</a></strong> · DataCamp</li>
         </ul>
       </section>
 

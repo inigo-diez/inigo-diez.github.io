@@ -493,6 +493,14 @@ a.hoverline:hover {
   display: block;
 }
 
+#skills .col svg.method-icon {
+  margin: 0 auto;
+  width: 100%;
+  height: 110px;
+  padding-bottom: 10px;
+  display: block;
+}
+
 .card.large .card-content p {
   color: inherit;
   margin: 0;
