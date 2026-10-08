@@ -574,10 +574,34 @@
         <!-- GRUPO 4: IA Generativa -->
         <div style="border-left: 4px solid #008073; padding-left: 12px; margin-bottom: 24px; margin-top: 40px;">
           <h5 class="teal-text" style="margin:0; font-weight:600;">IA Generativa para Ciencia e Ingeniería</h5>
-          <p class="grey-text" style="margin:4px 0 0 0; font-size:0.9rem;">Large Language Models · LangChain · RAG · Tool Calling · Grounded Generation · RAG Evaluation</p>
+          <p class="grey-text" style="margin:4px 0 0 0; font-size:0.9rem;">Large Language Models · LLM multimodales · Document AI · LangChain · RAG · Tool Calling · Grounded Generation · RAG Evaluation</p>
         </div>
 
         <div class="project-group-block">
+
+          <!-- IA0: Figuris -->
+          <div class="project-item">
+            <div class="row valign-wrapper" style="margin:0;">
+              <div class="col s12 m3">
+                <div class="project-stat-box project-stat-box--genai">
+                  <img src="/assets/img/proj-figuris-logo.svg" alt="Logo de Figuris" style="width:100%;height:130px;object-fit:contain;background:#fff;border-radius:6px 6px 0 0;padding:22px;box-sizing:border-box;">
+                  <div style="padding:12px 8px 10px;">
+                    <div class="project-stat-number">292</div>
+                    <div class="project-stat-label">figuras evaluadas · 48 artículos</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m9">
+                <a href="https://github.com/inigo-diez/Figuris" target="_blank" class="project-title-link">Figuris — Extracción y Explicación Verificable de Figuras Científicas</a>
+                <div class="project-chips">
+                  <span class="chip tech-chip">Python</span><span class="chip tech-chip">LLM multimodal</span><span class="chip tech-chip">Grounded Generation</span><span class="chip tech-chip">OCR (PP-OCRv6)</span><span class="chip tech-chip">ONNX Runtime</span><span class="chip tech-chip">pdfium</span><span class="chip tech-chip">FastAPI</span><span class="chip tech-chip">Pydantic</span><span class="chip tech-chip">Evaluación</span><span class="chip tech-chip">Pytest</span>
+                </div>
+                <p class="project-description">Sistema local que localiza cada figura de un PDF científico, la asocia con su pie y con los párrafos que la citan y lee el texto impreso en ella. Solo entonces un modelo multimodal genera una explicación estructurada en la que cada afirmación declara su tipo (observado, según los autores, inferencia o incierto) y cita su fuente, y un validador determinista comprueba esas citas antes de mostrarlas. Evaluado sobre SFI-48, un corpus propio de 48 artículos y 292 figuras con un conjunto de prueba congelado: F1 0,87 en detección de figuras, y el validador detectó las 7 citas inventadas por el modelo en 149 explicaciones. Coste total en llamadas al modelo: menos de 1 $.</p>
+                <p class="grey-text" style="font-size:0.85rem;margin-top:-6px;">Desarrollado con asistencia de agentes de IA (Claude Code). Planteamiento, diseño de la evaluación y análisis de resultados propios.</p>
+                <a href="https://github.com/inigo-diez/Figuris" target="_blank" class="project-gh-btn btn-small waves-effect waves-light blue-grey"><i class="fa fa-github"></i> Ver en GitHub</a>
+              </div>
+            </div>
+          </div>
 
           <!-- IA1 -->
           <div class="project-item" style="border-bottom:none;">
